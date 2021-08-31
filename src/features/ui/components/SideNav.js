@@ -23,7 +23,7 @@ const Close = styled(XIcon)`
 const StyledFlex = styled(Flex)`
   height: 100%;
   width: 210px;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
@@ -119,21 +119,21 @@ const SideNav = ({ setSideNavOpen }) => {
       ),
       link: "/contact",
     },
-    // {
-    //   label: "Verification Requests",
-    //   icon: (
-    //     <ShieldCheckIcon
-    //       style={{
-    //         color:
-    //           path.includes("/admin/verification-requests")
-    //             ? chosenTabColor
-    //             : tabColor,
-    //         width: iconSize,
-    //       }}
-    //     />
-    //   ),
-    //   link: "/admin/verification-requests",
-    // },
+    {
+      label: "Pricing",
+      icon: (
+        <ShieldCheckIcon
+          style={{
+            color:
+              path.includes("/pricing")
+                ? chosenTabColor
+                : tabColor,
+            width: iconSize,
+          }}
+        />
+      ),
+      link: "/pricing",
+    },
     // {
     //   label: "Settings",
     //   icon: (

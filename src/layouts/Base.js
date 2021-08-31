@@ -9,8 +9,9 @@ import { MenuIcon } from "@heroicons/react/outline";
 const DynamicFlex = styled(Flex)`
   flex-direction: column;
   align-items: center;
-  width: 400px;
+  width: 600px;
   padding-bottom: 30px;
+  margin-top: 180px; // poss change this value later
   @media (max-width: 500px) {
     width: 100%;
   }
@@ -46,11 +47,16 @@ function Base({ sx, children }) {
         backgroundSize: ["contain", "contain"],
         justifyContent: "center",
         alignItems: ["center"],
+        bg: "#FFE6EA",
         ...sx,
       }}
     >
       <TopNav>
-        <MenuIcon width={45} onClick={() => setSideNavOpen(true)} />
+        <MenuIcon
+          width={45}
+          style={{ cursor: "pointer" }}
+          onClick={() => setSideNavOpen(true)}
+        />
         <Image width="200px" height="200px" src={logo} />
         <ExternalLink to="https://www.instagram.com/emilyvioletaesthetics/">
           <Image width="40px" height="40px" src={insta} />
