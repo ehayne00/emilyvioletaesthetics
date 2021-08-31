@@ -13,6 +13,7 @@ function App() {
       <Route path="/booking" component={Booking} exact />
       <Route path="/contact" component={Contact} exact />
       <Route path="/pricing" component={Pricing} exact />
+      <Route path="/gallery-my-work" component={Gallery} exact />
     </Switch>
   );
 }
