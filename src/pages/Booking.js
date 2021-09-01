@@ -17,8 +17,11 @@ const Booking = () => (
       appointment, otherwise, you will lose your deposit.
     </Text>
     <Text>
-      If you are 30 mins or later late for your appointment, we may ask you to
-      reschedule and you may lose your deposit for that time slot.
+      We ask that you aim to arrive 5 minutes before your appointment time. If
+      you are late for your appointment, it will make the clinican run late for
+      everyone for the rest of the day. If you are 30 mins late for your
+      appointment, we will ask you to reschedule and you will lose your deposit
+      for that time slot.
     </Text>
   </Base>
 );
