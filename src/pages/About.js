@@ -27,10 +27,10 @@ const About = () => (
       My goal is to listen to your personal desires or concerns, and work
       together with you to put together a treatment plan that would suit you and
       your individual looks. Filler treatments in all areas can be subtle and
-      natural looking, or if more is desired, this can also be achievable, but
-      we always ensure that large additions are a process, so we can build on
-      your natural features gradually to ensure we get the right result and that
-      you are happy at each stage.
+      natural looking, or if more is desired, this can also be achievable,
+      within reason, but we always ensure that large additions are a process, so
+      we can build on your natural features gradually to ensure we get the right
+      result and that you are happy at each stage.
     </Text>
     <Text sx={{ my: "10px", fontWeight: 600, fontSize: headerFont }}>
       What If?
@@ -44,7 +44,7 @@ const About = () => (
       try and achieve a different result. Often, if people have old filler in an
       area that doesn’t maintain a reasonable shape, we will dissolve if
       possible before refilling so that we get the optimal result when we fill.
-      Its always good to be honest about whether you have had filler elsewhere
+      It's always good to be honest about whether you have had filler elsewhere
       in the past, as we will likely notice, and it’s good for us to know what
       we are working with or could be building on top of potentially. This is
       also dependant on what kind of filler someone has used with you in the
@@ -58,6 +58,10 @@ const About = () => (
       learning and updating my skillset. I have held UK qualified positions such
       as dental nurse, dental hygienist and transitioned my skills into
       aesthetics as its something that I feel most passionate about.
+    </Text>
+    <Text sx={{ fontSize: bodyFont }}>
+      I am a Royal College of Surgeons trained Dental Hygienist (GDC#:244931)
+      and Aesthetic Practitioner, based in North London, UK.
     </Text>
   </Base>
 );

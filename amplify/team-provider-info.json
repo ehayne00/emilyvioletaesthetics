@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-emilyvioletaesthetic-dev-82344-authRole",
+      "UnauthRoleArn": "arn:aws:iam::279279642800:role/amplify-emilyvioletaesthetic-dev-82344-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::279279642800:role/amplify-emilyvioletaesthetic-dev-82344-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-emilyvioletaesthetic-dev-82344-deployment",
+      "UnauthRoleName": "amplify-emilyvioletaesthetic-dev-82344-unauthRole",
+      "StackName": "amplify-emilyvioletaesthetic-dev-82344",
+      "StackId": "arn:aws:cloudformation:eu-west-2:279279642800:stack/amplify-emilyvioletaesthetic-dev-82344/b4d46840-1075-11ec-ade6-0afb297eaac4",
+      "AmplifyAppId": "d2fmw59srq422u"
+    }
+  }
+}

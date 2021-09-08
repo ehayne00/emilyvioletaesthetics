@@ -4,24 +4,17 @@ import { Text } from "theme-ui";
 
 const Booking = () => (
   <Base>
-    <Text>Our bookings / appointments are handled through Treatwell.co.uk</Text>
     <Text>
-      You can sign up to Treatwell through their website or app, and then search
-      for Emily Violet Aesthetics on there, or come back here and press the
-      button below to book something in!
+      We ask that you make an account with us, if you haven't already, so that
+      you can track your past / future appointments, fees paid, and book via our
+      booking system. We will also send you a reminder of your appointment 24
+      hours in advance.
     </Text>
     <Text>
-      Treatwell will ask for a deposit for each appointment slot, which is
-      deducted from the final amount you'll pay on the day. If you need to
-      cancel your booking for any reason, please cancel 24+ hours before your
-      appointment, otherwise, you will lose your deposit.
-    </Text>
-    <Text>
-      We ask that you aim to arrive 5 minutes before your appointment time. If
-      you are late for your appointment, it will make the clinican run late for
-      everyone for the rest of the day. If you are 30 mins late for your
-      appointment, we will ask you to reschedule and you will lose your deposit
-      for that time slot.
+      For all appointments, we ask you to pay a deposit of £30 at booking phase.
+      This deposit is fully refundable provided the appointment is cancelled 24
+      hours in advance. Any last minute cancellations will forfeit their deposit
+      fee.
     </Text>
   </Base>
 );
