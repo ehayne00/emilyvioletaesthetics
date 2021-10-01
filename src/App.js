@@ -4,6 +4,7 @@ import Booking from "./pages/Booking";
 import Treatments from "./pages/Treatments";
 import Contact from "./pages/Contact";
 import Pricing from "./pages/Pricing";
+import Gallery from "./pages/Gallery"
 
 function App() {
   return (

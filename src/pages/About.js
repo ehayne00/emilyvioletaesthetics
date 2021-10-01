@@ -1,15 +1,33 @@
 import React from "react";
 import Base from "../layouts/Base";
-import { Text, Image } from "theme-ui";
+import { Image } from "theme-ui";
 import openingImage from "../assets/opening-photo.png";
+import emilyPhoto from "../assets/emily-photo.JPG";
+import styled from "styled-components";
+import Text from "../ui/Text"
 
 const headerFont = "20px";
 const bodyFont = "18px";
 
+const EmilyPhoto = styled(Image)`
+  width: 200px;
+  height: auto;
+  border-radius: 100px;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+`;
+
 const About = () => (
   <Base>
     <Image width="100%" height="auto" src={openingImage} />
-    <Text sx={{ my: "10px", fontWeight: 600, fontSize: headerFont }}>
+    <Text
+      sx={{
+        my: "10px",
+        fontWeight: 600,
+        fontSize: headerFont,
+      }}
+    >
       About Emily Violet Aesthetics
     </Text>
     <Text sx={{ fontSize: bodyFont }}>
@@ -53,6 +71,7 @@ const About = () => (
     <Text sx={{ my: "10px", fontWeight: 600, fontSize: headerFont }}>
       Who is Emily?
     </Text>
+    <EmilyPhoto src={emilyPhoto} />
     <Text sx={{ fontSize: bodyFont }}>
       I (Emily) have worked in healthcare for 10+ years (since 2011) continually
       learning and updating my skillset. I have held UK qualified positions such

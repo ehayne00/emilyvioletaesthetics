@@ -4,14 +4,11 @@ import styled from "styled-components";
 import { NavLink, useRouteMatch } from "react-router-dom";
 import {
   ViewGridIcon,
-  BriefcaseIcon,
-  UserGroupIcon,
-  CollectionIcon,
-  ShieldExclamationIcon,
-  ShieldCheckIcon,
-  CogIcon,
-  LoginIcon,
   XIcon,
+  QuestionMarkCircleIcon,
+  BadgeCheckIcon,
+  CalendarIcon,
+  AtSymbolIcon,
 } from "@heroicons/react/outline";
 // import { connect } from "react-redux";
 // import { signOut } from "../../account/store/account.actions";
@@ -35,46 +32,20 @@ const StyledFlex = styled(Flex)`
   flex-direction: column;
   align-items: left;
   border-right: 3px solid #e5e5e5;
-  background-color: white;
+  background-color: #f8f2f3;
 `;
-
-// const LogOut = styled(Flex)`
-//   position: absolute;
-//   bottom: 20px;
-//   left: 20px;
-//   :hover {
-//     cursor: pointer;
-//   }
-// `;
-
-// const mapDispatch = (dispatch) => ({
-//   onSignOut: () => dispatch(signOut()),
-// });
 
 const SideNav = ({ setSideNavOpen }) => {
   const { path } = useRouteMatch();
-  const chosenTabColor = "#CC6A70";
-  const tabColor = "#909090";
+  const chosenTabColor = "#bb3385";
+  const tabColor = "#595959";
+  const subListColor = "#909090";
   const iconSize = 20;
   const pages = [
-    // {
-    //   label: "Dashboard",
-    //   icon: (
-    //     <ViewGridIcon
-    //       style={{
-    //         color: path.includes("/admin/dashboard")
-    //           ? chosenTabColor
-    //           : tabColor,
-    //         width: iconSize,
-    //       }}
-    //     />
-    //   ),
-    //   link: "/admin/dashboard",
-    // },
     {
       label: "About",
       icon: (
-        <BriefcaseIcon
+        <QuestionMarkCircleIcon
           style={{
             color: path === "/" ? chosenTabColor : tabColor,
             width: iconSize,
@@ -82,11 +53,17 @@ const SideNav = ({ setSideNavOpen }) => {
         />
       ),
       link: "/",
+      subLinks: [
+        { label: "About" },
+        { label: "Emily's Goal" },
+        { label: "What If's" },
+        { label: "Who Is Emily?" },
+      ],
     },
     {
       label: "Treatments",
       icon: (
-        <UserGroupIcon
+        <ViewGridIcon
           style={{
             color: path.includes("/treatments") ? chosenTabColor : tabColor,
             width: iconSize,
@@ -94,11 +71,20 @@ const SideNav = ({ setSideNavOpen }) => {
         />
       ),
       link: "/treatments",
+      subLinks: [
+        { label: "Liquid Rhinoplasty" },
+        { label: "Lip Augmentation" },
+        { label: "Nasolabial Folds" },
+        { label: "Marionette Lines" },
+        { label: "Cheek Re-shaping" },
+        { label: "Chin Re-shaping" },
+        { label: "Jawline Re-shaping" },
+      ],
     },
     {
       label: "Booking",
       icon: (
-        <CollectionIcon
+        <CalendarIcon
           style={{
             color: path.includes("/booking") ? chosenTabColor : tabColor,
             width: iconSize,
@@ -110,7 +96,7 @@ const SideNav = ({ setSideNavOpen }) => {
     {
       label: "Contact",
       icon: (
-        <ShieldExclamationIcon
+        <AtSymbolIcon
           style={{
             color: path.includes("/contact") ? chosenTabColor : tabColor,
             width: iconSize,
@@ -122,67 +108,90 @@ const SideNav = ({ setSideNavOpen }) => {
     {
       label: "Pricing",
       icon: (
-        <ShieldCheckIcon
+        <BadgeCheckIcon
           style={{
-            color:
-              path.includes("/pricing")
-                ? chosenTabColor
-                : tabColor,
+            color: path.includes("/pricing") ? chosenTabColor : tabColor,
             width: iconSize,
           }}
         />
       ),
       link: "/pricing",
     },
-    // {
-    //   label: "Settings",
-    //   icon: (
-    //     <CogIcon
-    //       style={{
-    //         color: path.includes("/admin/settings") ? chosenTabColor : tabColor,
-    //         width: iconSize,
-    //       }}
-    //     />
-    //   ),
-    //   link: "/admin/settings",
-    // },
   ];
   return (
     <StyledFlex>
       <Flex sx={{ justifyContent: "flex-end", mr: 10 }}>
         <Close width={25} onClick={() => setSideNavOpen(false)} />
       </Flex>
-      <Text sx={{ fontSize: "16px", my: 4, fontFamily: "heading" }}>
+      <Text
+        sx={{
+          fontSize: "17px",
+          my: 3,
+          px: 1,
+          fontFamily: "heading",
+          maxWidth: "max-content",
+          backgroundColor: "rgba(255,189,89,0.9)",
+          color: "#570220",
+          borderRadius: 4,
+        }}
+      >
         Emily Violet Aesthetics
       </Text>
       {pages.map((page) => (
-        <NavLink
-          to={page.link}
-          style={{ textDecoration: "none", marginBottom: 20 }}
-          onClick={() => setSideNavOpen(false)}
-        >
-          <Flex
-            sx={{
-              flexDirection: "row",
-              alignItems: "center",
-              cursor: "pointer",
+        <>
+          <NavLink
+            to={page.link}
+            style={{
+              textDecoration: "none",
+              marginBottom: page?.subLinks ? 2 : 5,
+              marginTop: 10,
             }}
+            onClick={() => setSideNavOpen(false)}
           >
-            {page.icon}
-            <Text
+            <Flex
               sx={{
-                ml: 2,
-                color:
-                  path === page.link || path.includes(page.link)
-                    ? chosenTabColor
-                    : tabColor,
-                fontSize: 2,
+                flexDirection: "row",
+                alignItems: "center",
+                cursor: "pointer",
               }}
             >
-              {page.label}
-            </Text>
-          </Flex>
-        </NavLink>
+              {page.icon}
+              <Text
+                sx={{
+                  ml: 2,
+                  color:
+                    (page.label === "About" && path === page.link) ||
+                    (page.label !== "About" && path.includes(page.link))
+                      ? chosenTabColor
+                      : tabColor,
+                  fontSize: 2,
+                  fontWeight: 600,
+                }}
+              >
+                {page.label}
+              </Text>
+            </Flex>
+          </NavLink>
+          {page?.subLinks &&
+            page.subLinks.map((sub) => (
+              <Flex
+                sx={{
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
+                <Text
+                  sx={{
+                    ml: 4,
+                    color: subListColor,
+                    fontSize: "13px",
+                  }}
+                >
+                  • {sub.label}
+                </Text>
+              </Flex>
+            ))}
+        </>
       ))}
     </StyledFlex>
   );
