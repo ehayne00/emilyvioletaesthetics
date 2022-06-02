@@ -1,12 +1,13 @@
 import React from "react";
-import Base from "../layouts/Base";
-import { Image } from "theme-ui";
+import Modern from "../layouts/Modern";
+import { Image, Flex, Button } from "theme-ui";
 import openingImage from "../assets/opening-photo.png";
 import emilyPhoto from "../assets/emily-photo.JPG";
 import styled from "styled-components";
-import Text from "../ui/Text"
+import Text from "../ui/Text";
+import HoursText from "../ui/HoursText";
 
-const headerFont = "20px";
+const headerFont = "24px";
 const bodyFont = "18px";
 
 const EmilyPhoto = styled(Image)`
@@ -18,71 +19,167 @@ const EmilyPhoto = styled(Image)`
   }
 `;
 
+const ExternalLink = ({ to = "/", children }) => (
+  <a
+    href={to}
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ textDecoration: "none" }}
+  >
+    {children}
+  </a>
+);
+
 const About = () => (
-  <Base>
-    <Image width="100%" height="auto" src={openingImage} />
-    <Text
-      sx={{
-        my: "10px",
-        fontWeight: 600,
-        fontSize: headerFont,
-      }}
-    >
-      About Emily Violet Aesthetics
-    </Text>
-    <Text sx={{ fontSize: bodyFont }}>
-      At our clinic, my aim is to assist you in enhancing your natural features
-      to help bring out the best in you and help you reach your full potential.
-      I am passionate about self-improvement and helping others gain a sense of,
-      or re-finding their self-confidence. The facial treatments I offer can be
-      for correction, to clear away tiredness, refresh or add to your natural
-      beauty.
-    </Text>
-    <Text sx={{ my: "10px", fontWeight: 600, fontSize: headerFont }}>
-      My Goal
-    </Text>
-    <Text sx={{ fontSize: bodyFont }}>
-      My goal is to listen to your personal desires or concerns, and work
-      together with you to put together a treatment plan that would suit you and
-      your individual looks. Filler treatments in all areas can be subtle and
-      natural looking, or if more is desired, this can also be achievable,
-      within reason, but we always ensure that large additions are a process, so
-      we can build on your natural features gradually to ensure we get the right
-      result and that you are happy at each stage.
-    </Text>
-    <Text sx={{ my: "10px", fontWeight: 600, fontSize: headerFont }}>
-      What If?
-    </Text>
-    <Text sx={{ fontSize: bodyFont }}>
-      With fillers administered by me, everything is always reversible. If
-      either the clinician (me) or the patient (you) is unhappy about the
-      appearance of an area of filler, we can inject an enzyme which rapidly
-      breaks down the filler, returning the site to normal. We can either fully
-      remove the filler if you’d prefer, or we can remove some and re-fill to
-      try and achieve a different result. Often, if people have old filler in an
-      area that doesn’t maintain a reasonable shape, we will dissolve if
-      possible before refilling so that we get the optimal result when we fill.
-      It's always good to be honest about whether you have had filler elsewhere
-      in the past, as we will likely notice, and it’s good for us to know what
-      we are working with or could be building on top of potentially. This is
-      also dependant on what kind of filler someone has used with you in the
-      past.
-    </Text>
-    <Text sx={{ my: "10px", fontWeight: 600, fontSize: headerFont }}>
-      Who is Emily?
-    </Text>
-    <EmilyPhoto src={emilyPhoto} />
-    <Text sx={{ fontSize: bodyFont }}>
-      I (Emily) have worked in healthcare for 10+ years (since 2011) continually
-      learning and updating my skillset. I have held UK qualified positions such
-      as dental nurse, dental hygienist and transitioned my skills into
-      aesthetics as its something that I feel most passionate about.
-    </Text>
-    <Text sx={{ fontSize: bodyFont }}>
-      I am a Royal College of Surgeons trained Dental Hygienist (GDC#:244931)
-      and Aesthetic Practitioner, based in North London, UK.
-    </Text>
-  </Base>
+  <Modern>
+    <Flex sx={{ flexDirection: "row" }}>
+      <Flex
+        sx={{
+          flexDirection: "column",
+          width: "100%",
+        }}
+      >
+        <Flex
+          sx={{
+            flexDirection: "column",
+            width: "100%",
+            borderBottom: "1px solid black",
+            mb: "10px",
+          }}
+        >
+          <Text
+            fontSize={headerFont}
+            sx={{
+              fontSize: headerFont,
+            }}
+          >
+            Dermal Filler in North London (I come to you!)
+          </Text>
+          <Text
+            fontSize={headerFont}
+            sx={{
+              fontSize: "12px",
+              mb: "10px",
+            }}
+          >
+            *The following postcodes only: N10, N8, N6, N22, N12, N11, N19. You
+            must be 18+ years of age and have photographic proof of age.
+          </Text>
+          <HoursText
+            sx={{
+              fontSize: bodyFont,
+              mb: "10px",
+              textDecoration: "underline",
+            }}
+          >
+            Days:
+          </HoursText>
+          <HoursText
+            sx={{
+              fontSize: bodyFont,
+              mb: "10px",
+            }}
+          >
+            Friday 8.30am - 5pm<br></br>Saturday (one per month) 8.30am - 4pm
+          </HoursText>
+          <ExternalLink to="https://emilyvioletaesthetics.simplybook.it">
+            <Flex
+              sx={{
+                flexDirection: "row",
+                borderRadius: "4px",
+                p: "5px",
+                maxWidth: "max-content",
+                bg: "#bb3385",
+                mb: "20px",
+                cursor: "pointer",
+              }}
+            >
+              <HoursText sx={{ color: "yellow", fontWeight: 700 }}>
+                Book Your Dermal filler visit here
+              </HoursText>
+            </Flex>
+          </ExternalLink>
+        </Flex>
+        <Text
+          sx={{
+            fontSize: headerFont,
+          }}
+        >
+          Anti-wrinkle injections in Chiswick (Smilcare Dental Practice, W4 2ED)
+        </Text>
+        <Text
+          fontSize={headerFont}
+          sx={{
+            fontSize: "12px",
+            mb: "10px",
+          }}
+        >
+          *You must be 18+ years of age and have photographic proof of age.
+        </Text>
+        <HoursText
+          sx={{
+            fontSize: bodyFont,
+            mb: "10px",
+            textDecoration: "underline",
+          }}
+        >
+          Days:
+        </HoursText>
+        <HoursText
+          sx={{
+            fontSize: bodyFont,
+            mb: "10px",
+          }}
+        >
+          Monday 8.30am - 5pm<br></br>Wednesday 8.30am - 4pm<br></br>Friday
+          8.30am - 2pm
+        </HoursText>
+        <ExternalLink to="https://www.smilecarechiswickdentists.co.uk/">
+          <Flex
+            sx={{
+              flexDirection: "row",
+              borderRadius: "4px",
+              p: "5px",
+              maxWidth: "max-content",
+              bg: "#bb3385",
+              mb: "20px",
+            }}
+          >
+            <HoursText sx={{ color: "yellow" }}>
+              Visit smilecare's website for booking
+            </HoursText>
+          </Flex>
+        </ExternalLink>
+      </Flex>
+      <Image width="100%" height="auto" ml="20px" src={openingImage} />
+    </Flex>
+    <Flex sx={{ flexDirection: "row", mt: "10px" }}>
+      <Flex
+        sx={{
+          flexDirection: "column",
+          alignItems: "center",
+          width: "100%",
+        }}
+      >
+        <Text
+          sx={{
+            my: "10px",
+            fontWeight: 600,
+            fontSize: headerFont,
+          }}
+        >
+          Who is Emily?
+        </Text>
+        <EmilyPhoto src={emilyPhoto} />
+      </Flex>
+      <Text sx={{ fontSize: bodyFont, mt: "20px" }}>
+        Emily graduated from UCLH in Dental Hygiene (dipDent, GDC:244931) and
+        went on to complete CPD accredited courses in Basic & Advanced Dermal
+        Fillers, Non-surgical Rhinoplasty, Lip Augmentation Masterclass and
+        Basic & Advanced Botox.
+      </Text>
+    </Flex>
+  </Modern>
 );
 
 export default About;

@@ -1,7 +1,7 @@
 import { Text as ThemeText } from "theme-ui";
 
-const Text = ({ children }) => (
-  <ThemeText sx={{ fontFamily: "Amaranth, sans-serif" }}>{children}</ThemeText>
+const Text = ({ sx, children }) => (
+  <ThemeText sx={{ fontFamily: "Amaranth, sans-serif", ...sx }}>{children}</ThemeText>
 );
 
 export default Text;
