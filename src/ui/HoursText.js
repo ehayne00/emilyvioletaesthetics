@@ -1,3 +1,4 @@
+import React from "react"
 import { Text as ThemeText } from "theme-ui";
 
 const HoursText = ({ sx, children }) => (
