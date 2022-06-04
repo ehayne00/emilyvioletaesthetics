@@ -23,11 +23,6 @@ const TopNav = styled(Flex)`
   top: 0;
   background-image: linear-gradient(to right, #bb3385, #e79fc4);
 `;
-const ExternalLink = ({ to = "/", children }) => (
-  <a href={to} target="_blank" rel="noopener noreferrer">
-    {children}
-  </a>
-);
 
 function Modern({ sx, children }) {
   return (

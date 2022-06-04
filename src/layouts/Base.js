@@ -22,7 +22,6 @@ const TopNav = styled(Flex)`
   padding-right: 35px;
   padding-top: 2px;
   justify-content: space-between;
-  /* border-bottom: 1px solid black; */
   align-items: center;
   box-shadow: 0 0 5px black;
   position: fixed;
