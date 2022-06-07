@@ -25,6 +25,7 @@ const EmilyPhoto = styled(Image)`
 const FillerPhoto = styled(Image)`
   width: 400px;
   height: auto;
+  margin-top: 10px;
   object-fit: contain;
 `;
 
@@ -56,6 +57,7 @@ const About = () => {
         sx={{
           flexDirection: ["column-reverse", "row"],
           alignItems: "flex-start",
+          mx: ["0", "0", "0", "10px"],
           display: loading === true ? "none" : "block",
         }}
       >
@@ -375,6 +377,7 @@ const About = () => {
           sx={{
             display: loading === true ? "none" : "block",
             mt: ["15px", "0", "0"],
+            mr: ["0", "0", "0", "10px"]
           }}
         />
       </Flex>
