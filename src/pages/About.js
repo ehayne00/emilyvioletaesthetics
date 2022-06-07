@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modern from "../layouts/Modern";
 import { Image, Flex, Link } from "theme-ui";
 import openingImage from "../assets/opening-photo.png";
@@ -10,14 +10,21 @@ import Text from "../ui/Text";
 import HoursText from "../ui/HoursText";
 import insta from "../assets/instagram.svg";
 import email from "../assets/email.png";
+import teosyal from "../assets/teosyal-fillers.png";
 
 const headerFont = "24px";
 const bodyFont = "18px";
 
-const EmilyPhoto = styled.img`
+const EmilyPhoto = styled(Image)`
   width: 200px;
   height: auto;
   border-radius: 100px;
+  object-fit: contain;
+`;
+
+const FillerPhoto = styled(Image)`
+  width: 400px;
+  height: auto;
   object-fit: contain;
 `;
 
@@ -26,229 +33,390 @@ const OpeningPhoto = styled(Image)`
   object-fit: contain;
 `;
 
-const CPDPhoto = styled.img`
+const CPDPhoto = styled(Image)`
   width: 150px;
   height: auto;
   margin-top: 10px;
   object-fit: contain;
 `;
 
-const UCLImage = styled.img`
+const UCLImage = styled(Image)`
   width: 250px;
   height: auto;
   margin-top: 10px;
   object-fit: contain;
 `;
 
-const ExternalLink = ({ to = "/", children }) => (
-  <a
-    href={to}
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{ textDecoration: "none" }}
-  >
-    {children}
-  </a>
-);
+const About = () => {
+  const [loading, setLoading] = useState(true);
 
-const About = () => (
-  <Modern>
-    <Flex
-      sx={{
-        flexDirection: ["column-reverse", "row"],
-        alignItems: "flex-start",
-      }}
-    >
+  return (
+    <Modern loading={loading} setLoading={setLoading}>
       <Flex
         sx={{
-          flexDirection: "column",
-          width: "100%",
+          flexDirection: ["column-reverse", "row"],
+          alignItems: "flex-start",
+          display: loading === true ? "none" : "block",
         }}
       >
-        <Text
-          fontSize={headerFont}
-          sx={{
-            fontSize: headerFont,
-            mt: ["10px", "0px"],
-          }}
-        >
-          Dermal Filler in North London (I come to you!)
-        </Text>
-        <Text
-          fontSize={headerFont}
-          sx={{
-            fontSize: "12px",
-            mb: "10px",
-            width: "90%",
-          }}
-        >
-          *The following postcodes only: N10, N8, N6, N22, N12, N11, N19. You
-          must be 18+ years of age and have photographic proof of age. A deposit
-          is required upon booking, which is refundable up to 24 hours before
-          your appointment slot and will be deducted from the overall treatment
-          price if treatment is completed.
-        </Text>
-        <HoursText
-          sx={{
-            fontSize: bodyFont,
-            mb: "10px",
-            textDecoration: "underline",
-          }}
-        >
-          Days:
-        </HoursText>
-        <HoursText
-          sx={{
-            fontSize: bodyFont,
-            mb: "10px",
-          }}
-        >
-          Friday 2pm - 6pm<br></br>Saturday (one per month) 9am - 1pm
-        </HoursText>
-        <ExternalLink to="https://emilyvioletaesthetics.simplybook.it">
-          <Flex
-            sx={{
-              flexDirection: "row",
-              borderRadius: "4px",
-              p: "5px",
-              maxWidth: "max-content",
-              bg: "#bb3385",
-              mb: "20px",
-              cursor: "pointer",
-            }}
-          >
-            <Text sx={{ color: "#fcbc5c", fontWeight: 700 }}>
-              BOOK YOUR DERMAL FILLER VISIT HERE
-            </Text>
-          </Flex>
-        </ExternalLink>
-        <Flex
-          sx={{ borderBottom: "1px solid black", mb: "10px", width: "85%" }}
-        />
-        <Text
-          sx={{
-            fontSize: headerFont,
-          }}
-        >
-          Anti-wrinkle injections in Chiswick (Smilcare Dental Practice, W4 2ED)
-        </Text>
-        <Text
-          fontSize={headerFont}
-          sx={{
-            fontSize: "12px",
-            mb: "10px",
-          }}
-        >
-          *You must be 18+ years of age and have photographic proof of age.
-        </Text>
-        <HoursText
-          sx={{
-            fontSize: bodyFont,
-            mb: "10px",
-            textDecoration: "underline",
-          }}
-        >
-          Days:
-        </HoursText>
-        <HoursText
-          sx={{
-            fontSize: bodyFont,
-            mb: "10px",
-          }}
-        >
-          Monday 8.30am - 5pm<br></br>Wednesday 8.30am - 4pm<br></br>Friday
-          8.30am - 2pm
-        </HoursText>
-        <ExternalLink to="https://www.smilecarechiswickdentists.co.uk/">
-          <Flex
-            sx={{
-              flexDirection: "row",
-              borderRadius: "4px",
-              p: "5px",
-              maxWidth: "max-content",
-              bg: "#bb3385",
-              mb: "20px",
-            }}
-          >
-            <Text sx={{ color: "#fcbc5c" }}>
-              VISIT SMILECARE'S WEBSITE FOR BOOKING
-            </Text>
-          </Flex>
-        </ExternalLink>
-      </Flex>
-      <OpeningPhoto
-        sx={{ width: ["100%", "600px", "100%"] }}
-        src={openingImage}
-      />
-    </Flex>
-    <Flex
-      sx={{
-        flexDirection: ["column", "row"],
-        mt: "10px",
-        bg: "#e79fc4",
-        pb: "20px",
-      }}
-    >
-      <Flex
-        sx={{
-          flexDirection: "column",
-          alignItems: "center",
-          width: "100%",
-        }}
-      >
-        <Text
-          sx={{
-            my: "10px",
-            fontWeight: 600,
-            fontSize: headerFont,
-          }}
-        >
-          Who is Emily?
-        </Text>
-        <EmilyPhoto src={emilyPhoto} />
-      </Flex>
-      <Flex sx={{ flexDirection: "column", alignItems: "center" }}>
-        <Text sx={{ fontSize: bodyFont, mt: "20px", width: "96%" }}>
-          Emily graduated from UCLH in Dental Hygiene (dipDent, GDC:244931) and
-          went on to complete CPD accredited courses in Basic & Advanced Dermal
-          Fillers, Non-surgical Rhinoplasty, Lip Augmentation Masterclass and
-          Basic & Advanced Botox.
-        </Text>
         <Flex
           sx={{
-            flexDirection: ["column", "row"],
+            flexDirection: "column",
             width: "100%",
-            justifyContent: "space-around",
-            alignItems: ["center", "flex-start"],
+            display: loading === true ? "none" : "block",
           }}
         >
-          <CPDPhoto src={cpdPhoto} />
-          <UCLImage src={ucl} />
+          <Text
+            fontSize={headerFont}
+            sx={{
+              fontSize: headerFont,
+              mt: ["10px", "0px"],
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            Dermal Filler in North London (I come to you!)
+          </Text>
+          <Text
+            fontSize={headerFont}
+            sx={{
+              fontSize: "12px",
+              mb: "10px",
+              width: "90%",
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            *The following postcodes only: N10, N8, N6, N22, N12, N11, N19. You
+            must be 18+ years of age and have photographic proof of age. A
+            deposit is required upon booking, which is refundable up to 24 hours
+            before your appointment slot and will be deducted from the overall
+            treatment price if treatment is completed.
+          </Text>
+          <Flex
+            sx={{
+              flexDirection: "column",
+              backgroundImage: "linear-gradient(to right, #FFF7F8, #FFE6EA)",
+              mb: "10px",
+              p: "5px",
+              width: ["100%", "100%", "100%", "85%"],
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            <HoursText
+              sx={{
+                fontSize: bodyFont,
+                mb: "10px",
+                textDecoration: "underline",
+                display: loading === true ? "none" : "block",
+              }}
+            >
+              Days:
+            </HoursText>
+            <HoursText
+              sx={{
+                fontSize: bodyFont,
+                display: loading === true ? "none" : "block",
+              }}
+            >
+              Friday 2pm - 5.45pm<br></br>Saturday (one per month) 9am - 2pm
+            </HoursText>
+          </Flex>
+          <Link
+            href="https://emilyvioletaesthetics.simplybook.it"
+            sx={{
+              textDecoration: "none",
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            <Flex
+              sx={{
+                flexDirection: "row",
+                borderRadius: "4px",
+                p: "5px",
+                maxWidth: "max-content",
+                bg: "#bb3385",
+                mb: "20px",
+                cursor: "pointer",
+                display: loading === true ? "none" : "block",
+              }}
+            >
+              <Text
+                sx={{
+                  color: "#fcbc5c",
+                  fontWeight: 700,
+                  display: loading === true ? "none" : "block",
+                }}
+              >
+                BOOK YOUR DERMAL FILLER VISIT HERE
+              </Text>
+            </Flex>
+          </Link>
+          <Flex
+            sx={{
+              borderBottom: "1px solid black",
+              mb: "10px",
+              width: "85%",
+              display: loading === true ? "none" : "block",
+            }}
+          />
+          <Text
+            sx={{
+              fontSize: headerFont,
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            Anti-wrinkle injections in Chiswick (Smilcare Dental Practice, W4
+            2ED)
+          </Text>
+          <Text
+            fontSize={headerFont}
+            sx={{
+              fontSize: "12px",
+              mb: "10px",
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            *You must be 18+ years of age and have photographic proof of age.
+          </Text>
+          <Flex
+            sx={{
+              flexDirection: "column",
+              backgroundImage: "linear-gradient(to right, #FFF7F8, #FFE6EA)",
+              mb: "10px",
+              p: "5px",
+              width: ["100%", "100%", "100%", "85%"],
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            <HoursText
+              sx={{
+                fontSize: bodyFont,
+                mb: "10px",
+                textDecoration: "underline",
+                display: loading === true ? "none" : "block",
+              }}
+            >
+              Days:
+            </HoursText>
+            <HoursText
+              sx={{
+                fontSize: bodyFont,
+                display: loading === true ? "none" : "block",
+              }}
+            >
+              Monday 8.30am - 5pm<br></br>Wednesday 8.30am - 4pm<br></br>Friday
+              8.30am - 2pm
+            </HoursText>
+          </Flex>
+          <Link
+            href="https://www.smilecarechiswickdentists.co.uk/"
+            sx={{
+              textDecoration: "none",
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            <Flex
+              sx={{
+                flexDirection: "row",
+                borderRadius: "4px",
+                p: "5px",
+                maxWidth: "max-content",
+                bg: "#bb3385",
+                mb: "20px",
+                display: loading === true ? "none" : "block",
+              }}
+            >
+              <Text
+                sx={{
+                  color: "#fcbc5c",
+                  display: loading === true ? "none" : "block",
+                }}
+              >
+                VISIT SMILECARE'S WEBSITE FOR BOOKING
+              </Text>
+            </Flex>
+          </Link>
+        </Flex>
+        <OpeningPhoto
+          sx={{
+            width: ["100%", "600px", "100%"],
+            display: loading === true ? "none" : "block",
+          }}
+          src={openingImage}
+        />
+      </Flex>
+      <Flex
+        sx={{
+          flexDirection: ["column", "row"],
+          mt: "10px",
+          bg: loading === true ? "none" : "#e79fc4",
+          pb: "20px",
+          display: loading === true ? "none" : "block",
+        }}
+      >
+        <Flex
+          sx={{
+            flexDirection: "column",
+            alignItems: "center",
+            width: "100%",
+            display: loading === true ? "none" : "block",
+          }}
+        >
+          <Text
+            sx={{
+              my: "10px",
+              fontWeight: 600,
+              fontSize: headerFont,
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            Who is Emily?
+          </Text>
+          <EmilyPhoto
+            src={emilyPhoto}
+            sx={{ display: loading === true ? "none" : "block" }}
+          />
+        </Flex>
+        <Flex
+          sx={{
+            flexDirection: "column",
+            alignItems: "center",
+            display: loading === true ? "none" : "block",
+          }}
+        >
+          <Text
+            sx={{
+              fontSize: bodyFont,
+              mt: "20px",
+              width: "96%",
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            Emily graduated from UCLH in Dental Hygiene (dipDent, GDC:244931)
+            and went on to complete CPD accredited courses in Basic & Advanced
+            Dermal Fillers, Non-surgical Rhinoplasty, Lip Augmentation
+            Masterclass and Basic & Advanced Botox.
+          </Text>
+          <Flex
+            sx={{
+              flexDirection: ["column", "row"],
+              width: "100%",
+              justifyContent: "space-around",
+              alignItems: ["center", "flex-start"],
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            <CPDPhoto
+              src={cpdPhoto}
+              sx={{ display: loading === true ? "none" : "block" }}
+            />
+            <UCLImage
+              src={ucl}
+              sx={{ display: loading === true ? "none" : "block" }}
+            />
+          </Flex>
         </Flex>
       </Flex>
-    </Flex>
-    <Flex
-      sx={{
-        width: "100%",
-        flexDirection: "row",
-        justifyContent: "space-around",
-        alignItems: "center",
-      }}
-    >
-      <Link
-        href="mailto:emilyvioletaesthetics@gmail.com"
-        sx={{ display: ["block", "none", "none"] }}
+      <Flex
+        sx={{
+          flexDirection: ["column", "row"],
+          mt: "10px",
+          pb: "20px",
+          display: loading === true ? "none" : "block",
+        }}
       >
-        <Image width="55px" height="55px" src={email} />
-      </Link>
-      <Link
-        href="https://www.instagram.com/emilyvioletaesthetics/"
-        sx={{ display: ["block", "none", "none"] }}
+        <Flex
+          sx={{
+            flexDirection: "column",
+            alignItems: "center",
+            width: "100%",
+            display: loading === true ? "none" : "block",
+          }}
+        >
+          <Text
+            sx={{
+              my: "10px",
+              fontWeight: 600,
+              fontSize: headerFont,
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            What products does Emily use?
+          </Text>
+          <Text
+            sx={{
+              fontSize: bodyFont,
+              mt: "20px",
+              width: "98%",
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            Emily uses TEOSYAL® by TEOXANE, who offer 'the most complete range
+            of 100% non-animal origin resorbable hyaluronic acid-based dermal
+            filler products for a global and personalized treatment of the
+            face.'
+            <br></br>
+            <br></br> TEOXANE say 'The results are seen immediately after the
+            treatment, although this gradually improves over the course of the
+            following 2–4 weeks. Hyaluronic acid dermal filler treatments are
+            not permanent and usually last up to 22 months. Nevertheless, the
+            average duration of treatment depends on several factors including
+            your skin type, the severity of the wrinkle/fold to be corrected,
+            the type of injection and the volume of product injected.'<br></br>
+            <br></br>
+            Comparison with JUVÉDERM®: 'Both JUVÉDERM® and TEOSYAL® have a
+            similar mechanism of action, list of ingredients, and duration of
+            action, making them very similar in terms of efficacy and safety.
+            Either brand can help achieve a desired look, with the deciding
+            factor lying mostly in practitioner and patient preference.'
+          </Text>
+        </Flex>
+        <FillerPhoto
+          src={teosyal}
+          sx={{
+            display: loading === true ? "none" : "block",
+            mt: ["15px", "0", "0"],
+          }}
+        />
+      </Flex>
+      <Flex
+        sx={{
+          width: "100%",
+          flexDirection: "row",
+          justifyContent: "space-around",
+          alignItems: "center",
+          bg: loading === true ? "none" : "#e79fc4",
+          display: loading === true ? "none" : "block",
+        }}
       >
-        <Image width="30px" height="30px" src={insta} />
-      </Link>
-    </Flex>
-  </Modern>
-);
+        <Link
+          href="mailto:emilyvioletaesthetics@gmail.com"
+          sx={{
+            display: loading === true ? "none" : ["block", "none", "none"],
+          }}
+        >
+          <Image
+            width="55px"
+            height="55px"
+            src={email}
+            sx={{ display: loading === true ? "none" : "block" }}
+          />
+        </Link>
+        <Link
+          href="https://www.instagram.com/emilyvioletaesthetics/"
+          sx={{
+            display: loading === true ? "none" : ["block", "none", "none"],
+          }}
+        >
+          <Image
+            width="30px"
+            height="30px"
+            src={insta}
+            sx={{ display: loading === true ? "none" : "block" }}
+          />
+        </Link>
+      </Flex>
+    </Modern>
+  );
+};
 
 export default About;

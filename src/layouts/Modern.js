@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Image, Link } from "theme-ui";
+import { Flex, Image, Link, Spinner } from "theme-ui";
 import styled from "styled-components";
 import insta from "../assets/instagram.svg";
 import logo from "../assets/e-v-logo.png";
@@ -12,24 +12,24 @@ const DynamicFlex = styled(Flex)`
   align-items: center;
   padding-bottom: 30px;
 `;
+
 const TopNav = styled(Flex)`
   flex-direction: row;
   padding-left: 35px;
   padding-right: 35px;
   padding-top: 2px;
   align-items: center;
-  box-shadow: 0 0 5px black;
   width: 100vw;
   top: 0;
-  background-image: linear-gradient(to right, #bb3385, #e79fc4);
 `;
 
-function Modern({ sx, children }) {
+function Modern({ sx, loading, setLoading, children }) {
   return (
     <Flex
       sx={{
         flexDirection: "column",
         width: "100%",
+        height: loading === true ? "100vh" : "none",
         alignItems: ["center"],
         bg: "#FFE6EA",
         ...sx,
@@ -39,13 +39,26 @@ function Modern({ sx, children }) {
         sx={{
           height: ["25vh", "25vh", "25vh", "40vh"],
           justifyContent: ["center", "space-between", "space-between"],
+          display: loading === true ? "none" : "block",
+          backgroundImage:
+            loading === true
+              ? "none"
+              : "linear-gradient(to right, #bb3385, #e79fc4)",
+          boxShadow: loading === true ? "none" : "0 0 5px black",
         }}
       >
         <Link
           href="mailto:emilyvioletaesthetics@gmail.com"
-          sx={{ display: ["none", "block", "block"] }}
+          sx={{
+            display: ["none", "block", "block"],
+          }}
         >
-          <Image width="50px" height="50px" src={email} />
+          <Image
+            width="50px"
+            height="50px"
+            src={email}
+            sx={{ display: loading === true ? "none" : "block" }}
+          />
         </Link>
         <Flex
           sx={{
@@ -57,19 +70,43 @@ function Modern({ sx, children }) {
           <Image
             width="200px"
             height="200px"
-            sx={{ position: "absolute" }}
+            sx={{
+              position: "absolute",
+              display: loading === true ? "none" : "block",
+            }}
             src={logo}
           />
-          <Image sx={{ width: ["280px", "500px"] }} src={flowers} />
+          <Image
+            sx={{ width: ["280px", "500px"] }}
+            src={flowers}
+            onLoad={() => loading === true && setLoading(false)}
+          />
         </Flex>
         <Link
           href="https://www.instagram.com/emilyvioletaesthetics/"
-          sx={{ display: ["none", "block", "block"] }}
+          sx={{
+            display: ["none", "block", "block"],
+          }}
         >
-          <Image width="30px" height="30px" src={insta} />
+          <Image
+            width="30px"
+            height="30px"
+            src={insta}
+            sx={{ display: loading === true ? "none" : "block" }}
+          />
         </Link>
       </TopNav>
-      <DynamicFlex sx={{ mt: "20px", px: "10px" }}>{children}</DynamicFlex>
+      {loading && <Spinner sx={{ mt: "20px" }} />}
+      <DynamicFlex
+        loading={loading}
+        sx={{
+          mt: "20px",
+          px: "10px",
+          display: loading === true ? "none" : "block",
+        }}
+      >
+        {children}
+      </DynamicFlex>
     </Flex>
   );
 }
