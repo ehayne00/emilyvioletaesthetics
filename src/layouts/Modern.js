@@ -27,6 +27,7 @@ function Modern({ sx, loading, setLoading, children }) {
   return (
     <Flex
       sx={{
+        mt: "-10px",
         flexDirection: "column",
         width: "100%",
         height: loading === true ? "100vh" : "none",

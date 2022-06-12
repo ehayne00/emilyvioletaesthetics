@@ -251,7 +251,8 @@ const About = () => {
           flexDirection: ["column", "row"],
           mt: "10px",
           bg: loading === true ? "none" : "#e79fc4",
-          pb: "20px",
+          pb: "25px",
+          pt: "10px",
           display: loading === true ? "none" : "block",
         }}
       >
@@ -377,9 +378,110 @@ const About = () => {
           sx={{
             display: loading === true ? "none" : "block",
             mt: ["15px", "0", "0"],
-            mr: ["0", "0", "0", "10px"]
+            mr: ["0", "0", "0", "10px"],
           }}
         />
+      </Flex>
+      <Flex
+        sx={{
+          maxWidth: "100%",
+          flexDirection: ["column", "row"],
+          justifyContent: "space-evenly",
+          mt: "10px",
+          bg: loading === true ? "none" : "#e79fc4",
+          p: "12px",
+          display: loading === true ? "none" : "block",
+        }}
+      >
+        <Flex
+          sx={{
+            flexDirection: "column",
+            width: "100%",
+            bg: "#FFF7F8",
+            p: "5px",
+            mb: ["12px", "0px", "0px"],
+            mr: ["0px", "12px", "12px"],
+          }}
+        >
+          <Text
+            sx={{
+              width: ["100%", "98%", "98%"],
+              maxWidth: "100%",
+              my: "10px",
+              fontWeight: 600,
+              fontSize: headerFont,
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            Pre-visit
+          </Text>
+          <Text
+            sx={{
+              width: "100%",
+              maxWidth: "100%",
+              fontSize: "16px",
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            • Avoid over-the-counter blood-thinning medications and supplements
+            for one week prior to your appointment, such as aspirin, Motrin,
+            ibuprofen, and Aleve. Also avoid herbal supplements such as garlic,
+            vitamin E, ginko biloba, St. John's Wort and omega-3 capsules. If
+            you have a cardiovascular history, please check with your doctor
+            prior to stopping use of aspirin. <br></br>• Avoid treatment if you
+            have an active coldsore (herpes simplex virus type 1)
+            <br></br>• Avoid topical products such as Tretinoin (Retin-A)
+            retinols, retinoids, glycolic acid, alpha hydroxy acid, or any
+            "anti-aging" products for two days before and after treatment.
+            <br></br>• Do not drink alcoholic beverages 24 hours before or after
+            your treatment to avoid extra bruising. <br></br>• Do not use dermal
+            fillers if you are pregnant or breastfeeding, are allergic to any of
+            it's ingredients or suffer from any neurological disorders.
+          </Text>
+        </Flex>
+        <Flex
+          sx={{
+            flexDirection: "column",
+            width: "100%",
+            bg: "#FFF7F8",
+            p: "5px",
+          }}
+        >
+          <Text
+            sx={{
+              width: ["100%", "98%", "98%"],
+              maxWidth: "100%",
+              my: "10px",
+              fontWeight: 600,
+              fontSize: headerFont,
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            During visit
+          </Text>
+          <Text
+            sx={{
+              width: "100%",
+              maxWidth: "100%",
+              fontSize: "16px",
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            • You will need to clear some flat space on a table for Emily to
+            work from.<br></br>• The table should have room next to it for the
+            treatment chair to fit next to it. <br></br>• Emily will bring the
+            treatment chair, a sterile single use treatment pack, medical grade
+            disinfectant wipes and her own waste disposal system. <br></br>•
+            Please ensure there is somewhere for Emily to wash her hands with
+            soap upon arrival.
+            <br></br>• Emily will require proof of your age with photographic
+            identification.
+            <br></br>• Emily will discuss with you your medical history,
+            treatment expectations, answer any questions and provide information
+            on the expected treatment, provide aftercare information, and if
+            both parties are consenting, then treatment will be carried out.
+          </Text>
+        </Flex>
       </Flex>
       <Flex
         sx={{
@@ -387,7 +489,6 @@ const About = () => {
           flexDirection: "row",
           justifyContent: "space-around",
           alignItems: "center",
-          bg: loading === true ? "none" : "#e79fc4",
           display: loading === true ? "none" : "block",
         }}
       >
