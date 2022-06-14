@@ -105,6 +105,7 @@ function Modern({ sx, loading, setLoading, children }) {
       <DynamicFlex
         loading={loading}
         sx={{
+          maxWidth: "1160px",
           mt: "20px",
           px: "10px",
           display: loading === true ? "none" : "block",
