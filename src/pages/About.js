@@ -96,7 +96,10 @@ const About = () => {
           <Flex
             sx={{
               flexDirection: "column",
-              backgroundImage: "linear-gradient(to right, #FFF7F8, #FFE6EA)",
+              backgroundImage:
+                loading === true
+                  ? "rgba(222,222,222,0)"
+                  : "linear-gradient(to right, #FFF7F8, #FFE6EA)",
               mb: "10px",
               p: "5px",
               width: ["100%", "100%", "100%", "85%"],
@@ -154,7 +157,10 @@ const About = () => {
           </Link>
           <Flex
             sx={{
-              borderBottom: "1px solid black",
+              borderBottom:
+                loading === true
+                  ? "1px solid rgba(222,222,222,0)"
+                  : "1px solid black",
               mb: "10px",
               width: "85%",
               display: loading === true ? "none" : "block",
@@ -182,7 +188,10 @@ const About = () => {
           <Flex
             sx={{
               flexDirection: "column",
-              backgroundImage: "linear-gradient(to right, #FFF7F8, #FFE6EA)",
+              backgroundImage:
+                loading === true
+                  ? "rgba(222,222,222,0)"
+                  : "linear-gradient(to right, #FFF7F8, #FFE6EA)",
               mb: "10px",
               p: "5px",
               width: ["100%", "100%", "100%", "85%"],
@@ -397,7 +406,7 @@ const About = () => {
           sx={{
             flexDirection: "column",
             width: "100%",
-            bg: "#FFF7F8",
+            bg: loading === true ? "rgba(222,222,222,0)" : "#FFF7F8",
             p: "5px",
             mb: ["12px", "0px", "0px"],
             mr: ["0px", "12px", "12px"],
@@ -443,7 +452,7 @@ const About = () => {
           sx={{
             flexDirection: "column",
             width: "100%",
-            bg: "#FFF7F8",
+            bg: loading === true ? "rgba(222,222,222,0)" : "#FFF7F8",
             p: "5px",
           }}
         >
