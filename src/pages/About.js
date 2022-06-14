@@ -127,6 +127,8 @@ const About = () => {
           </Flex>
           <Link
             href="https://emilyvioletaesthetics.simplybook.it"
+            target="_blank"
+            rel="noreferrer"
             sx={{
               textDecoration: "none",
               display: loading === true ? "none" : "block",
@@ -220,6 +222,8 @@ const About = () => {
           </Flex>
           <Link
             href="https://www.smilecarechiswickdentists.co.uk/"
+            target="_blank"
+            rel="noreferrer"
             sx={{
               textDecoration: "none",
               display: loading === true ? "none" : "block",
@@ -503,6 +507,8 @@ const About = () => {
       >
         <Link
           href="mailto:emilyvioletaesthetics@gmail.com"
+          target="_blank"
+          rel="noreferrer"
           sx={{
             display: loading === true ? "none" : ["block", "none", "none"],
           }}
@@ -516,6 +522,8 @@ const About = () => {
         </Link>
         <Link
           href="https://www.instagram.com/emilyvioletaesthetics/"
+          target="_blank"
+          rel="noreferrer"
           sx={{
             display: loading === true ? "none" : ["block", "none", "none"],
           }}

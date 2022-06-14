@@ -50,6 +50,8 @@ function Modern({ sx, loading, setLoading, children }) {
       >
         <Link
           href="mailto:emilyvioletaesthetics@gmail.com"
+          target="_blank"
+          rel="noreferrer"
           sx={{
             display: ["none", "block", "block"],
           }}
@@ -85,6 +87,8 @@ function Modern({ sx, loading, setLoading, children }) {
         </Flex>
         <Link
           href="https://www.instagram.com/emilyvioletaesthetics/"
+          target="_blank"
+          rel="noreferrer"
           sx={{
             display: ["none", "block", "block"],
           }}
