@@ -352,7 +352,7 @@ const About = () => {
             vitamin E, ginko biloba, St. John's Wort and omega-3 capsules. If
             you have a cardiovascular history, please check with your doctor
             prior to stopping use of aspirin. <br></br>• Avoid treatment if you
-            have an active coldsore (herpes simplex virus type 1)
+            have an active coldsore (herpes simplex virus type 1).
             <br></br>• Avoid topical products such as Tretinoin (Retin-A)
             retinols, retinoids, glycolic acid, alpha hydroxy acid, or any
             "anti-aging" products for two days before and after treatment.
