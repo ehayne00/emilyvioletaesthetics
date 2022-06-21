@@ -17,9 +17,9 @@ const headerFont = "24px";
 const bodyFont = "18px";
 
 const EmilyPhoto = styled(Image)`
-  width: 200px;
+  width: 210px;
   height: auto;
-  border-radius: 100px;
+  border-radius: 150px;
   object-fit: contain;
 `;
 
@@ -36,14 +36,14 @@ const OpeningPhoto = styled(Image)`
 `;
 
 const CPDPhoto = styled(Image)`
-  width: 150px;
+  width: 144px;
   height: auto;
   margin-top: 10px;
   object-fit: contain;
 `;
 
 const UCLImage = styled(Image)`
-  width: 250px;
+  width: 245px;
   height: auto;
   margin-top: 10px;
   object-fit: contain;
@@ -73,18 +73,20 @@ const About = () => {
             fontSize={headerFont}
             sx={{
               fontSize: headerFont,
+              width: "90%",
               mt: ["10px", "0px"],
               mb: ["0px", "0px", "0px", "20px"],
               display: loading === true ? "none" : "block",
             }}
           >
-            Dermal Filler in North London (I come to you!)
+            Anti-wrinkle Injections & Dermal Filler in North London (I come to
+            you!)
           </Text>
           <Text
             fontSize={headerFont}
             sx={{
               fontSize: "12px",
-              mb: ["10px","10px","10px", "40px"],
+              mb: ["10px", "10px", "10px", "40px"],
               width: "90%",
               display: loading === true ? "none" : "block",
             }}
@@ -102,7 +104,7 @@ const About = () => {
                 loading === true
                   ? "rgba(222,222,222,0)"
                   : "linear-gradient(to right, #FFF7F8, #FFE6EA)",
-              mb: ["10px","10px","10px", "50px"],
+              mb: ["10px", "10px", "10px", "50px"],
               p: "5px",
               width: ["100%", "100%", "100%", "85%"],
               display: loading === true ? "none" : "block",
@@ -124,7 +126,8 @@ const About = () => {
                 display: loading === true ? "none" : "block",
               }}
             >
-              Friday 2pm - 5.45pm<br></br>Saturday (one per month) 9am - 2pm
+              Friday 10am - 5.45pm
+              {/* <br></br>Saturday (one per month) 9am - 2pm */}
             </HoursText>
           </Flex>
           <Link
@@ -213,14 +216,16 @@ const About = () => {
             sx={{
               fontSize: bodyFont,
               mt: "20px",
-              width: "96%",
+              width: "95%",
               display: loading === true ? "none" : "block",
             }}
           >
             Emily graduated from UCLH in Dental Hygiene (dipDent, GDC:244931)
             and went on to complete CPD accredited courses in Basic & Advanced
             Dermal Fillers, Non-surgical Rhinoplasty, Lip Augmentation
-            Masterclass and Basic & Advanced Botox.
+            Masterclass and Basic & Advanced Botox. Emily works alongside an
+            accredited medical prescriber for the use of any prescription-only
+            medicines.
           </Text>
           <Flex
             sx={{
@@ -266,7 +271,7 @@ const About = () => {
               display: loading === true ? "none" : "block",
             }}
           >
-            What products does Emily use?
+            What dermal fillers does Emily use?
           </Text>
           <Text
             sx={{
@@ -276,10 +281,10 @@ const About = () => {
               display: loading === true ? "none" : "block",
             }}
           >
-            Emily uses TEOSYAL® by TEOXANE, who offer 'the most complete range
-            of 100% non-animal origin resorbable hyaluronic acid-based dermal
-            filler products for a global and personalized treatment of the
-            face.'
+            Emily uses TEOSYAL® by TEOXANE and JUVÉDERM®, who offer 'the most
+            complete range of 100% non-animal origin resorbable hyaluronic
+            acid-based dermal filler products for a global and personalized
+            treatment of the face.'
             <br></br>
             <br></br> TEOXANE say 'The results are seen immediately after the
             treatment, although this gradually improves over the course of the
@@ -289,11 +294,12 @@ const About = () => {
             your skin type, the severity of the wrinkle/fold to be corrected,
             the type of injection and the volume of product injected.'<br></br>
             <br></br>
-            Comparison with JUVÉDERM®: 'Both JUVÉDERM® and TEOSYAL® have a
-            similar mechanism of action, list of ingredients, and duration of
+            Comparing JUVÉDERM® and TEOSYAL®: 'Both JUVÉDERM® and TEOSYAL® have
+            a similar mechanism of action, list of ingredients, and duration of
             action, making them very similar in terms of efficacy and safety.
             Either brand can help achieve a desired look, with the deciding
-            factor lying mostly in practitioner and patient preference.'
+            factor lying mostly in practitioner and patient preference.' Both
+            are premium products.
           </Text>
         </Flex>
         <FillerPhoto
@@ -358,8 +364,9 @@ const About = () => {
             "anti-aging" products for two days before and after treatment.
             <br></br>• Do not drink alcoholic beverages 24 hours before or after
             your treatment to avoid extra bruising. <br></br>• Do not use dermal
-            fillers if you are pregnant or breastfeeding, are allergic to any of
-            it's ingredients or suffer from any neurological disorders.
+            fillers or anti-wrinkle injections if you are pregnant or
+            breastfeeding, are allergic to any of it's ingredients or suffer
+            from any neurological disorders.
           </Text>
         </Flex>
         <Flex
@@ -401,8 +408,9 @@ const About = () => {
             identification.
             <br></br>• Emily will discuss with you your medical history,
             treatment expectations, answer any questions and provide information
-            on the expected treatment, provide aftercare information, and if
-            both parties are consenting, then treatment will be carried out.
+            on the expected treatment, provide aftercare information, inspect
+            the area to be treated and if both parties are consenting, then
+            treatment will be carried out.
           </Text>
         </Flex>
       </Flex>
