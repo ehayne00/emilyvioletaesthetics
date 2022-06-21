@@ -408,7 +408,7 @@ const About = () => {
             identification.
             <br></br>• Emily will discuss with you your medical history,
             treatment expectations, answer any questions and provide information
-            on the expected treatment, provide aftercare information, inspect
+            on the expected treatment, provide aftercare information, examine
             the area to be treated and if both parties are consenting, then
             treatment will be carried out.
           </Text>
