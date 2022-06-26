@@ -104,7 +104,7 @@ const About = () => {
                 loading === true
                   ? "rgba(222,222,222,0)"
                   : "linear-gradient(to right, #FFF7F8, #FFE6EA)",
-              mb: ["10px", "10px", "10px", "50px"],
+              mb: ["15px", "10px", "10px", "50px"],
               p: "5px",
               width: ["100%", "100%", "100%", "85%"],
               display: loading === true ? "none" : "block",
@@ -131,24 +131,27 @@ const About = () => {
             </HoursText>
           </Flex>
           <Link
-            href="https://emilyvioletaesthetics.simplybook.it"
+            href="https://emilyvioletaesthetics.simplybook.it/v2/#book"
             target="_blank"
             rel="noreferrer"
             sx={{
               textDecoration: "none",
               display: loading === true ? "none" : "block",
+              maxWidth: "max-content",
             }}
           >
             <Flex
               sx={{
                 flexDirection: "row",
                 borderRadius: "4px",
-                p: "5px",
+                py: "5px",
+                px: "10px",
                 maxWidth: "max-content",
                 bg: "#bb3385",
                 mb: "20px",
                 cursor: "pointer",
                 display: loading === true ? "none" : "block",
+                boxShadow: "0 0 5px black",
               }}
             >
               <Text
@@ -158,7 +161,7 @@ const About = () => {
                   display: loading === true ? "none" : "block",
                 }}
               >
-                BOOK YOUR DERMAL FILLER VISIT HERE
+                BOOK YOUR TREATMENT VIA SIMPLYBOOK.IT
               </Text>
             </Flex>
           </Link>
