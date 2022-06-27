@@ -419,6 +419,7 @@ const About = () => {
       </Flex>
       <Flex
         sx={{
+          mt: "10px",
           width: "100%",
           flexDirection: "row",
           justifyContent: "space-around",
@@ -457,6 +458,10 @@ const About = () => {
           />
         </Link>
       </Flex>
+      <Text sx={{ mt: "20px", textAlign: "center", width: "98%", }}>
+        Contact Emily - WhatsApp: +442035760248 - email:
+        emilyvioletaesthetics@gmail.com
+      </Text>
     </Modern>
   );
 };
