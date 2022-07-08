@@ -458,7 +458,14 @@ const About = () => {
           />
         </Link>
       </Flex>
-      <Text sx={{ mt: "20px", textAlign: "center", width: "98%", }}>
+      <Text
+        sx={{
+          mt: "20px",
+          textAlign: "center",
+          width: "98%",
+          display: loading === true ? "none" : "block",
+        }}
+      >
         Contact Emily - WhatsApp: +442035760248 - email:
         emilyvioletaesthetics@gmail.com
       </Text>
