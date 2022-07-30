@@ -11,7 +11,7 @@ import Text from "../features/ui/components/Text";
 import HoursText from "../features/ui/components/HoursText";
 import insta from "../assets/instagram.svg";
 import email from "../assets/email.png";
-import teosyal from "../assets/teosyal-fillers.png";
+// import Filler from "./Filler";
 
 const headerFont = "24px";
 const bodyFont = "18px";
@@ -20,13 +20,6 @@ const EmilyPhoto = styled(Image)`
   width: 210px;
   height: auto;
   border-radius: 150px;
-  object-fit: contain;
-`;
-
-const FillerPhoto = styled(Image)`
-  width: 400px;
-  height: auto;
-  margin-top: 10px;
   object-fit: contain;
 `;
 
@@ -79,14 +72,13 @@ const About = () => {
               display: loading === true ? "none" : "block",
             }}
           >
-            Anti-wrinkle Injections & Dermal Filler in North London (I come to
-            you!)
+            Anti-wrinkle Injections in North London (I come to you!)
           </Text>
           <Text
             fontSize={headerFont}
             sx={{
               fontSize: "12px",
-              mb: ["10px", "10px", "10px", "40px"],
+              mb: ["10px", "10px", "10px", "30px"],
               width: "90%",
               display: loading === true ? "none" : "block",
             }}
@@ -104,7 +96,7 @@ const About = () => {
                 loading === true
                   ? "rgba(222,222,222,0)"
                   : "linear-gradient(to right, #FFF7F8, #FFE6EA)",
-              mb: ["15px", "10px", "10px", "50px"],
+              mb: ["15px", "10px", "10px", "30px"],
               p: "5px",
               width: ["100%", "100%", "100%", "85%"],
               display: loading === true ? "none" : "block",
@@ -130,6 +122,19 @@ const About = () => {
               {/* <br></br>Saturday (one per month) 9am - 2pm */}
             </HoursText>
           </Flex>
+          <Text
+            fontSize={headerFont}
+            sx={{
+              fontSize: "14px",
+              mb: ["10px", "10px", "10px", "30px"],
+              width: "90%",
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            If you are keen for a day / time that is not listed above, please
+            WhatsApp message Emily on +442035760248 to enquire about what is
+            possible.
+          </Text>
           <Link
             href="https://emilyvioletaesthetics.simplybook.it/v2/#book"
             target="_blank"
@@ -178,7 +183,7 @@ const About = () => {
       <Flex
         sx={{
           flexDirection: ["column", "row"],
-          mt: "10px",
+          my: "10px",
           bg: loading === true ? "none" : "#e79fc4",
           pb: "25px",
           pt: "10px",
@@ -227,8 +232,8 @@ const About = () => {
             and went on to complete CPD accredited courses in Basic & Advanced
             Dermal Fillers, Non-surgical Rhinoplasty, Lip Augmentation
             Masterclass and Basic & Advanced Botox. Emily works alongside an
-            accredited medical prescriber for the use of any prescription-only
-            medicines.
+            accredited medical prescriber (Dr Charlotte Auty, GMC: 7750610) for
+            the use of any prescription-only medicines.
           </Text>
           <Flex
             sx={{
@@ -250,78 +255,15 @@ const About = () => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex
-        sx={{
-          flexDirection: ["column", "row"],
-          mt: "10px",
-          pb: "20px",
-          display: loading === true ? "none" : "block",
-        }}
-      >
-        <Flex
-          sx={{
-            flexDirection: "column",
-            alignItems: "center",
-            width: "100%",
-            display: loading === true ? "none" : "block",
-          }}
-        >
-          <Text
-            sx={{
-              my: "10px",
-              fontWeight: 600,
-              fontSize: headerFont,
-              display: loading === true ? "none" : "block",
-            }}
-          >
-            What dermal fillers does Emily use?
-          </Text>
-          <Text
-            sx={{
-              fontSize: bodyFont,
-              mt: "20px",
-              width: "98%",
-              display: loading === true ? "none" : "block",
-            }}
-          >
-            Emily uses TEOSYAL® by TEOXANE and JUVÉDERM®, who offer 'the most
-            complete range of 100% non-animal origin resorbable hyaluronic
-            acid-based dermal filler products for a global and personalized
-            treatment of the face.'
-            <br></br>
-            <br></br> TEOXANE say 'The results are seen immediately after the
-            treatment, although this gradually improves over the course of the
-            following 2–4 weeks. Hyaluronic acid dermal filler treatments are
-            not permanent and usually last up to 22 months. Nevertheless, the
-            average duration of treatment depends on several factors including
-            your skin type, the severity of the wrinkle/fold to be corrected,
-            the type of injection and the volume of product injected.'<br></br>
-            <br></br>
-            Comparing JUVÉDERM® and TEOSYAL®: 'Both JUVÉDERM® and TEOSYAL® have
-            a similar mechanism of action, list of ingredients, and duration of
-            action, making them very similar in terms of efficacy and safety.
-            Either brand can help achieve a desired look, with the deciding
-            factor lying mostly in practitioner and patient preference.' Both
-            are premium products.
-          </Text>
-        </Flex>
-        <FillerPhoto
-          src={teosyal}
-          sx={{
-            display: loading === true ? "none" : "block",
-            mt: ["15px", "0", "0"],
-            mr: ["0", "0", "0", "10px"],
-          }}
-        />
-      </Flex>
+      {/* <Filler loading={loading} headerFont={headerFont} bodyFont={bodyFont} /> */}
       <Flex
         sx={{
           maxWidth: "100%",
           flexDirection: ["column", "row"],
           justifyContent: "space-evenly",
           mt: "10px",
-          bg: loading === true ? "none" : "#e79fc4",
-          p: "12px",
+          // bg: loading === true ? "none" : "#e79fc4",
+          // p: "12px",
           display: loading === true ? "none" : "block",
         }}
       >
@@ -330,7 +272,7 @@ const About = () => {
             flexDirection: "column",
             width: "100%",
             bg: loading === true ? "rgba(222,222,222,0)" : "#FFF7F8",
-            p: "5px",
+            p: "10px",
             mb: ["12px", "0px", "0px"],
             mr: ["0px", "12px", "12px"],
           }}
@@ -339,7 +281,7 @@ const About = () => {
             sx={{
               width: ["100%", "98%", "98%"],
               maxWidth: "100%",
-              my: "10px",
+              mb: "10px",
               fontWeight: 600,
               fontSize: headerFont,
               display: loading === true ? "none" : "block",
@@ -362,14 +304,13 @@ const About = () => {
             you have a cardiovascular history, please check with your doctor
             prior to stopping use of aspirin. <br></br>• Avoid treatment if you
             have an active coldsore (herpes simplex virus type 1).
-            <br></br>• Avoid topical products such as Tretinoin (Retin-A)
-            retinols, retinoids, glycolic acid, alpha hydroxy acid, or any
-            "anti-aging" products for two days before and after treatment.
             <br></br>• Do not drink alcoholic beverages 24 hours before or after
-            your treatment to avoid extra bruising. <br></br>• Do not use dermal
-            fillers or anti-wrinkle injections if you are pregnant or
-            breastfeeding, are allergic to any of it's ingredients or suffer
-            from any neurological disorders.
+            your treatment to avoid extra bruising. <br></br>• Do not use
+            anti-wrinkle injections if you are pregnant or breastfeeding or are
+            allergic to any of it's ingredients.<br></br>• Once you have booked
+            an appointment, Emily will send you a link to arrange a video
+            consultation with Dr Charlotte Auty, which must take place before
+            your appointment day / time.
           </Text>
         </Flex>
         <Flex
@@ -377,14 +318,16 @@ const About = () => {
             flexDirection: "column",
             width: "100%",
             bg: loading === true ? "rgba(222,222,222,0)" : "#FFF7F8",
-            p: "5px",
+            p: "10px",
+            mb: ["12px", "0px", "0px"],
+            mr: ["0px", "12px", "12px"],
           }}
         >
           <Text
             sx={{
               width: ["100%", "98%", "98%"],
               maxWidth: "100%",
-              my: "10px",
+              mb: "10px",
               fontWeight: 600,
               fontSize: headerFont,
               display: loading === true ? "none" : "block",
@@ -414,6 +357,51 @@ const About = () => {
             on the expected treatment, provide aftercare information, examine
             the area to be treated and if both parties are consenting, then
             treatment will be carried out.
+          </Text>
+        </Flex>
+        <Flex
+          sx={{
+            flexDirection: "column",
+            width: "100%",
+            bg: loading === true ? "rgba(222,222,222,0)" : "#FFF7F8",
+            p: "10px",
+          }}
+        >
+          <Text
+            sx={{
+              width: ["100%", "98%", "98%"],
+              maxWidth: "100%",
+              mb: "10px",
+              fontWeight: 600,
+              fontSize: headerFont,
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            Aftercare
+          </Text>
+          <Text
+            sx={{
+              width: "100%",
+              maxWidth: "100%",
+              fontSize: "16px",
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            • Do not massage the treated area at all. When washing, avoid
+            washing with hot water and pat dry very gently with a soft towel. Do
+            not rub the treated area for 48 hours.<br></br>• Do not bend
+            excessively / lean forwards or lie down for at least 4 hours. Do not
+            exercise for 24 hours. Avoid sunbathing, sunbeds, saunas, steam
+            rooms. <br></br>• Do exercise the treated muscles by tensing and
+            relaxing them for the first hour after treament. <br></br>•
+            Botulinum Toxin takes from 2-14 days to become effective. This is
+            dependent on the strength of the muscles injected and the individual
+            response.
+            <br></br>• If the degree of muscle relaxation is not as much as
+            you'd have liked 2 weeks after the first session, book in a top-up
+            2-4 weeks after the first session.
+            <br></br>• Treatment with Botulinum Toxin is temporary and to
+            maintain the effects, treatment is recommended every 3-6 months.
           </Text>
         </Flex>
       </Flex>
