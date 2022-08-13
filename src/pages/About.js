@@ -72,13 +72,14 @@ const About = () => {
               display: loading === true ? "none" : "block",
             }}
           >
+            Fat Dissolving Injections, Skin Boosters, Dermal Filler and
             Anti-wrinkle Injections in North London (I come to you!)
           </Text>
           <Text
             fontSize={headerFont}
             sx={{
               fontSize: "12px",
-              mb: ["10px", "10px", "10px", "30px"],
+              mb: ["10px", "10px", "10px", "20px"],
               width: "90%",
               display: loading === true ? "none" : "block",
             }}
@@ -96,7 +97,7 @@ const About = () => {
                 loading === true
                   ? "rgba(222,222,222,0)"
                   : "linear-gradient(to right, #FFF7F8, #FFE6EA)",
-              mb: ["15px", "10px", "10px", "30px"],
+              mb: ["15px", "10px", "10px", "20px"],
               p: "5px",
               width: ["100%", "100%", "100%", "85%"],
               display: loading === true ? "none" : "block",
@@ -118,7 +119,8 @@ const About = () => {
                 display: loading === true ? "none" : "block",
               }}
             >
-              Friday 10am - 5.45pm
+              Tuesday 6pm - 8.30pm
+              <br></br>Friday 10am - 5.45pm
               {/* <br></br>Saturday (one per month) 9am - 2pm */}
             </HoursText>
           </Flex>
@@ -126,14 +128,16 @@ const About = () => {
             fontSize={headerFont}
             sx={{
               fontSize: "14px",
-              mb: ["10px", "10px", "10px", "30px"],
+              mb: ["10px", "10px", "10px", "20px"],
               width: "90%",
               display: loading === true ? "none" : "block",
             }}
           >
             If you are keen for a day / time that is not listed above, please
             WhatsApp message Emily on +442035760248 to enquire about what is
-            possible.
+            possible. For anti-wrinkle injections or if you want your existing
+            filler dissolved, please WhatsApp Emily directly to arrange as
+            you'll need to consult with her medical prescriber prior.
           </Text>
           <Link
             href="https://emilyvioletaesthetics.simplybook.it/v2/#book"
@@ -231,9 +235,9 @@ const About = () => {
             Emily graduated from UCLH in Dental Hygiene (dipDent, GDC:244931)
             and went on to complete CPD accredited courses in Basic & Advanced
             Dermal Fillers, Non-surgical Rhinoplasty, Lip Augmentation
-            Masterclass and Basic & Advanced Botox. Emily works alongside an
-            accredited medical prescriber (Dr Charlotte Auty, GMC: 7750610) for
-            the use of any prescription-only medicines.
+            Masterclass, Basic & Advanced Botox, Aqualyx Fat Dissolving
+            Injections and Skin Boosters. Emily works alongside an accredited
+            medical prescriber for the use of any prescription-only medicines.
           </Text>
           <Flex
             sx={{
@@ -305,12 +309,12 @@ const About = () => {
             prior to stopping use of aspirin. <br></br>• Avoid treatment if you
             have an active coldsore (herpes simplex virus type 1).
             <br></br>• Do not drink alcoholic beverages 24 hours before or after
-            your treatment to avoid extra bruising. <br></br>• Do not use
-            anti-wrinkle injections if you are pregnant or breastfeeding or are
-            allergic to any of it's ingredients.<br></br>• Once you have booked
-            an appointment, Emily will send you a link to arrange a video
-            consultation with Dr Charlotte Auty, which must take place before
-            your appointment day / time.
+            your treatment to avoid extra bruising. <br></br>• Do not book a
+            treatment if you are pregnant or breastfeeding or are allergic to
+            any of it's ingredients.<br></br>• If you are interested in booking
+            anti-wrinkle injections or to have your existing filler dissolved,
+            you'll have to WhatsApp Emily directly to arrange this as you'll
+            need to consult with Emily's medical prescriber prior.
           </Text>
         </Flex>
         <Flex
@@ -320,7 +324,6 @@ const About = () => {
             bg: loading === true ? "rgba(222,222,222,0)" : "#FFF7F8",
             p: "10px",
             mb: ["12px", "0px", "0px"],
-            mr: ["0px", "12px", "12px"],
           }}
         >
           <Text
@@ -357,51 +360,6 @@ const About = () => {
             on the expected treatment, provide aftercare information, examine
             the area to be treated and if both parties are consenting, then
             treatment will be carried out.
-          </Text>
-        </Flex>
-        <Flex
-          sx={{
-            flexDirection: "column",
-            width: "100%",
-            bg: loading === true ? "rgba(222,222,222,0)" : "#FFF7F8",
-            p: "10px",
-          }}
-        >
-          <Text
-            sx={{
-              width: ["100%", "98%", "98%"],
-              maxWidth: "100%",
-              mb: "10px",
-              fontWeight: 600,
-              fontSize: headerFont,
-              display: loading === true ? "none" : "block",
-            }}
-          >
-            Aftercare
-          </Text>
-          <Text
-            sx={{
-              width: "100%",
-              maxWidth: "100%",
-              fontSize: "16px",
-              display: loading === true ? "none" : "block",
-            }}
-          >
-            • Do not massage the treated area at all. When washing, avoid
-            washing with hot water and pat dry very gently with a soft towel. Do
-            not rub the treated area for 48 hours.<br></br>• Do not bend
-            excessively / lean forwards or lie down for at least 4 hours. Do not
-            exercise for 24 hours. Avoid sunbathing, sunbeds, saunas, steam
-            rooms. <br></br>• Do exercise the treated muscles by tensing and
-            relaxing them for the first hour after treament. <br></br>•
-            Botulinum Toxin takes from 2-14 days to become effective. This is
-            dependent on the strength of the muscles injected and the individual
-            response.
-            <br></br>• If the degree of muscle relaxation is not as much as
-            you'd have liked 2 weeks after the first session, book in a top-up
-            2-4 weeks after the first session.
-            <br></br>• Treatment with Botulinum Toxin is temporary and to
-            maintain the effects, treatment is recommended every 3-6 months.
           </Text>
         </Flex>
       </Flex>
