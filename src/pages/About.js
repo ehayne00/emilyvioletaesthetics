@@ -72,8 +72,8 @@ const About = () => {
               display: loading === true ? "none" : "block",
             }}
           >
-            Fat Dissolving Injections, Skin Boosters, Dermal Filler and
-            Anti-wrinkle Injections in North London (I come to you!)
+            Anti-wrinkle Injections, Fat Dissolving Injections, Skin Boosters
+            and Dermal Filler in North London (I come to you!)
           </Text>
           <Text
             fontSize={headerFont}
@@ -135,9 +135,10 @@ const About = () => {
           >
             If you are keen for a day / time that is not listed above, please
             WhatsApp message Emily on +442035760248 to enquire about what is
-            possible. For anti-wrinkle injections or if you want your existing
-            filler dissolved, please WhatsApp Emily directly to arrange as
-            you'll need to consult with her medical prescriber prior.
+            possible. If you are interested in booking anti-wrinkle injections
+            or to have your existing filler dissolved, please book 3 days in
+            advance so that we have time to consult you and order the product
+            in.
           </Text>
           <Link
             href="https://emilyvioletaesthetics.simplybook.it/v2/#book"
@@ -313,8 +314,8 @@ const About = () => {
             treatment if you are pregnant or breastfeeding or are allergic to
             any of it's ingredients.<br></br>• If you are interested in booking
             anti-wrinkle injections or to have your existing filler dissolved,
-            you'll have to WhatsApp Emily directly to arrange this as you'll
-            need to consult with Emily's medical prescriber prior.
+            please book 3 days in advance so that we have time to consult you
+            and order the product in.
           </Text>
         </Flex>
         <Flex
