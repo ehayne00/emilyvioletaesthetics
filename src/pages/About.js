@@ -44,7 +44,10 @@ const UCLImage = styled(Image)`
 
 const About = () => {
   const [loading, setLoading] = useState(true);
-
+  const currentURL = window.location.href;
+  if (currentURL.includes("netlify")) {
+    window.location.replace ('https://www.emilyvioletaesthetics.co.uk')
+  }
   return (
     <Modern loading={loading} setLoading={setLoading}>
       <Flex
