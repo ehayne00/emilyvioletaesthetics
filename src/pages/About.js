@@ -46,7 +46,7 @@ const About = () => {
   const [loading, setLoading] = useState(true);
   const currentURL = window.location.href;
   if (currentURL.includes("netlify")) {
-    window.location.replace ('https://www.emilyvioletaesthetics.co.uk')
+    window.location.replace("https://www.emilyvioletaesthetics.co.uk");
   }
   return (
     <Modern loading={loading} setLoading={setLoading}>
@@ -71,12 +71,25 @@ const About = () => {
               fontSize: headerFont,
               width: "90%",
               mt: ["10px", "0px"],
-              mb: ["0px", "0px", "0px", "20px"],
+              // mb: ["0px", "0px", "0px", "20px"],
+              mb: ["0px", "0px", "0px", "5px"], // change back
               display: loading === true ? "none" : "block",
             }}
           >
-            Anti-wrinkle Injections, Fat Dissolving Injections, Skin Boosters
-            and Dermal Filler in North London (I come to you!)
+            Anti-wrinkle Injections and Dermal Filler in North London (I come to
+            you!)
+          </Text>
+          <Text
+            fontSize={headerFont}
+            sx={{
+              fontSize: "14px",
+              mb: ["10px", "10px", "10px", "20px"],
+              width: "90%",
+              display: loading === true ? "none" : "block",
+            }}
+          >
+            Coming soon: Fat Dissolving Injections & Skin Boosters (available on
+            SimplyBook.it from 1st Sept 2022)
           </Text>
           <Text
             fontSize={headerFont}
