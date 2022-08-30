@@ -76,8 +76,8 @@ const About = () => {
               display: loading === true ? "none" : "block",
             }}
           >
-            Anti-wrinkle Injections and Dermal Filler in North London (I come to
-            you!)
+            Fat Dissolving Injections, Anti-wrinkle Injections and Dermal Filler
+            in North London (I come to you!)
           </Text>
           <Text
             fontSize={headerFont}
@@ -88,8 +88,8 @@ const About = () => {
               display: loading === true ? "none" : "block",
             }}
           >
-            Coming soon: Fat Dissolving Injections & Skin Boosters (available on
-            SimplyBook.it from 1st Sept 2022)
+            Coming soon: Skin Boosters (available on SimplyBook.it from 1st Sept
+            2022)
           </Text>
           <Text
             fontSize={headerFont}
