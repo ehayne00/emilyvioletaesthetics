@@ -114,7 +114,7 @@ const About = () => {
               {/* <br></br>Saturday (one per month) 9am - 2pm */}
             </HoursText>
           </Flex>
-          <AccordionList />
+          <AccordionList loading={loading} />
           <Link
             href="https://emilyvioletaesthetics.simplybook.it/v2/#book"
             target="_blank"

@@ -1,30 +1,37 @@
 import React from "react";
-import { Flex } from "theme-ui";
+import { Flex, Text } from "theme-ui";
 
 const aging = [
   {
     title: "Anti-aging Treatments",
     header: "true",
     image: "",
-    text: "Profhilo is blah",
   },
-  { title: "PROFHILO® skin booster", image: "", text: "Profhilo is blah" },
-  { title: "SEVENTY HYAL® skin booster", image: "", text: "Profhilo is blah" },
+  {
+    title: "PROFHILO® skin booster",
+    image: "",
+    text: "£250 per session / £400 package",
+  },
+  {
+    title: "SEVENTY HYAL® skin booster",
+    image: "",
+    text: "£130 per session / £300 package",
+  },
   {
     title: "Anti-wrinkle injections with BOTOX®",
     image: "",
-    text: "Anti-wrinkle blah",
+    text: "£100 (one area), £240 (3 areas)",
   },
-  { title: "Micro-needling", image: "", text: "microneedling blah" },
+  { title: "Micro-needling", image: "", text: "£150" },
   {
     title: "Derma-planing",
     image: "",
-    text: "Fat dissolving blah",
+    text: "£45",
   },
   {
     title: "Chemical Peels",
     image: "",
-    text: "Fat dissolving blah",
+    text: "£70",
   },
 ];
 const beauty = [
@@ -32,37 +39,37 @@ const beauty = [
     title: "Other Beauty Treatments",
     header: "true",
     image: "",
-    text: "Profhilo is blah",
   },
   {
     title: "AQUALYX® fat dissolving injections",
     header: "true",
     image: "",
-    text: "Profhilo is blah",
+    text:
+      "Per session £150 (small area), £250 (large area), packages available",
   },
   {
     title: "Dermal filler",
     header: "true",
     image: "",
-    text: "Profhilo is blah",
+    text: "0.5ml £150, 1ml £280, 2ml £550, 3ml £750...+",
   },
   {
     title: "Lash lift and tint",
     header: "true",
     image: "",
-    text: "Profhilo is blah",
+    text: "£70",
   },
   {
     title: "Facials",
     image: "",
-    text: "Fat dissolving blah",
+    text: "please view booking site for range",
   },
 ];
 
-const Box = ({ treatments }) => (
+const Box = ({ treatments, loading }) => (
   <Flex
     sx={{
-      border: "1px solid black",
+      border: loading === true ? "none" : "1px solid black",
       flexDirection: "column",
       width: ["100%", "50%"],
       maxWidth: ["100%", "max-content"],
@@ -72,24 +79,47 @@ const Box = ({ treatments }) => (
     {treatments.map((treatment, index) => (
       <Flex
         sx={{
-          py: "5px",
+          flexDirection: "column",
+          py: "3px",
           px: "10px",
           // cursor: "pointer",
-          bg: index === 0 ? "#e79fc4" : "rgba(222,222,222,0)",
+          bg:
+            index === 0 && loading !== true ? "#e79fc4" : "rgba(222,222,222,0)",
           textDecoration: index === 0 ? "underline" : "none",
         }}
       >
-        {treatment.title}
+        <Text
+          sx={{
+            fontSize: "15px",
+            display: loading === true ? "none" : "block",
+          }}
+        >
+          {treatment.title}
+        </Text>
+        <Text
+          sx={{
+            fontSize: "12px",
+            display: loading === true ? "none" : "block",
+          }}
+        >
+          {treatment.text}
+        </Text>
       </Flex>
     ))}
   </Flex>
 );
 
-const AccordionList = () => {
+const AccordionList = ({ loading }) => {
   return (
-    <Flex sx={{ flexDirection: ["column", "row"], mb: "15px" }}>
-      <Box treatments={aging} />
-      <Box treatments={beauty} />
+    <Flex
+      sx={{
+        flexDirection: ["column", "row"],
+        mb: "15px",
+        display: loading === true ? "none" : "block",
+      }}
+    >
+      <Box treatments={aging} loading={loading} />
+      <Box treatments={beauty} loading={loading} />
     </Flex>
   );
 };
