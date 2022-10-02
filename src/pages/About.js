@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modern from "../layouts/Modern";
 import { Image, Flex, Link } from "theme-ui";
+import AccordionList from "../features/ui/components/AccordionList";
 // import SmilecareMention from "../features/sections/SmilecareMention";
 import openingImage from "../assets/opening-photo.png";
 import emilyPhoto from "../assets/emily-photo.JPG";
@@ -29,14 +30,14 @@ const OpeningPhoto = styled(Image)`
 `;
 
 const CPDPhoto = styled(Image)`
-  width: 144px;
+  width: 130px;
   height: auto;
   margin-top: 10px;
   object-fit: contain;
 `;
 
 const UCLImage = styled(Image)`
-  width: 245px;
+  width: 230px;
   height: auto;
   margin-top: 10px;
   object-fit: contain;
@@ -72,39 +73,12 @@ const About = () => {
               width: "90%",
               mt: ["10px", "0px"],
               // mb: ["0px", "0px", "0px", "20px"],
-              mb: ["0px", "0px", "0px", "5px"], // change back
+              mb: "10px", // change back
               display: loading === true ? "none" : "block",
             }}
           >
-            Fat Dissolving Injections, Anti-wrinkle Injections and Dermal Filler
-            in North London (I come to you!)
-          </Text>
-          <Text
-            fontSize={headerFont}
-            sx={{
-              fontSize: "14px",
-              mb: ["10px", "10px", "10px", "20px"],
-              width: "90%",
-              display: loading === true ? "none" : "block",
-            }}
-          >
-            Coming soon: Skin Boosters (available on SimplyBook.it from 1st Sept
-            2022)
-          </Text>
-          <Text
-            fontSize={headerFont}
-            sx={{
-              fontSize: "12px",
-              mb: ["10px", "10px", "10px", "20px"],
-              width: "90%",
-              display: loading === true ? "none" : "block",
-            }}
-          >
-            *The following postcodes only: N10, N8, N6, N22, N12, N11, N19. You
-            must be 18+ years of age and have photographic proof of age. A
-            deposit is required upon booking, which is refundable up to 24 hours
-            before your appointment slot and will be deducted from the overall
-            treatment price if treatment is completed.
+            Emily Violet Aesthetics at AVALON, 87 Weston Park, Crouch End, N8
+            9PR
           </Text>
           <Flex
             sx={{
@@ -113,7 +87,7 @@ const About = () => {
                 loading === true
                   ? "rgba(222,222,222,0)"
                   : "linear-gradient(to right, #FFF7F8, #FFE6EA)",
-              mb: ["15px", "10px", "10px", "20px"],
+              mb: ["15px", "10px", "10px", "15px"],
               p: "5px",
               width: ["100%", "100%", "100%", "85%"],
               display: loading === true ? "none" : "block",
@@ -135,27 +109,12 @@ const About = () => {
                 display: loading === true ? "none" : "block",
               }}
             >
-              Tuesday 6pm - 8.30pm
-              <br></br>Friday 10am - 5.45pm
+              Tuesday 9am - 5pm
+              {/* <br></br>Friday 10am - 5.45pm */}
               {/* <br></br>Saturday (one per month) 9am - 2pm */}
             </HoursText>
           </Flex>
-          <Text
-            fontSize={headerFont}
-            sx={{
-              fontSize: "14px",
-              mb: ["10px", "10px", "10px", "20px"],
-              width: "90%",
-              display: loading === true ? "none" : "block",
-            }}
-          >
-            If you are keen for a day / time that is not listed above, please
-            WhatsApp message Emily on +442035760248 to enquire about what is
-            possible. If you are interested in booking anti-wrinkle injections
-            or to have your existing filler dissolved, please book 3 days in
-            advance so that we have time to consult you and order the product
-            in.
-          </Text>
+          <AccordionList />
           <Link
             href="https://emilyvioletaesthetics.simplybook.it/v2/#book"
             target="_blank"
@@ -253,8 +212,10 @@ const About = () => {
             and went on to complete CPD accredited courses in Basic & Advanced
             Dermal Fillers, Non-surgical Rhinoplasty, Lip Augmentation
             Masterclass, Basic & Advanced Botox, Aqualyx Fat Dissolving
-            Injections and Skin Boosters. Emily works alongside an accredited
-            medical prescriber for the use of any prescription-only medicines.
+            Injections, Skin Boosters, Lash Lift & Tinting, Microneedling,
+            Dermaplaning, Chemical Peels and Facials. Emily works alongside an
+            accredited medical prescriber for the use of any prescription-only
+            medicines.
           </Text>
           <Flex
             sx={{
@@ -295,7 +256,6 @@ const About = () => {
             bg: loading === true ? "rgba(222,222,222,0)" : "#FFF7F8",
             p: "10px",
             mb: ["12px", "0px", "0px"],
-            mr: ["0px", "12px", "12px"],
           }}
         >
           <Text
@@ -308,7 +268,7 @@ const About = () => {
               display: loading === true ? "none" : "block",
             }}
           >
-            Pre-visit
+            Pre-visit (for injectable treatments)
           </Text>
           <Text
             sx={{
@@ -324,61 +284,52 @@ const About = () => {
             vitamin E, ginko biloba, St. John's Wort and omega-3 capsules. If
             you have a cardiovascular history, please check with your doctor
             prior to stopping use of aspirin. <br></br>• Avoid treatment if you
-            have an active coldsore (herpes simplex virus type 1).
+            have an active coldsore (herpes simplex virus type 1). If you are
+            prone to coldsore's, you may need to consult a pharmacy for
+            anti-coldsore medication that will help prevent an outbreak during/
+            post-treatment.
             <br></br>• Do not drink alcoholic beverages 24 hours before or after
             your treatment to avoid extra bruising. <br></br>• Do not book a
             treatment if you are pregnant or breastfeeding or are allergic to
-            any of it's ingredients.<br></br>• If you are interested in booking
-            anti-wrinkle injections or to have your existing filler dissolved,
-            please book 3 days in advance so that we have time to consult you
-            and order the product in.
+            any of it's ingredients.<br></br>• You must be 18+ years of age and
+            have photographic proof of age.<br></br>• If you are interested in
+            booking anti-wrinkle injections or to have your existing filler
+            dissolved, please book 3 days or more in advance so that we have
+            time to review your information and order the product in.<br></br>•
+            Avoid wearing makeup in the area to be treated on the day.<br></br>•
+            Just be aware that it is usually advised to avoid exercise, steam
+            rooms, saunas, sunbathing for 1-11 days after any injectable
+            treatments. The duration advised will be dependent on which specific
+            treatment you attend for.<br></br>• Emily will always review your
+            medical form details, discuss the treatment and options with you,
+            answer any questions, ensure you are happily informed and consenting
+            as well as a fitting candidate before any treatment takes place.
           </Text>
         </Flex>
-        <Flex
+      </Flex>
+      <Flex
+        sx={{
+          flexDirection: ["column", "row"],
+          my: "10px",
+          bg: loading === true ? "none" : "#e79fc4",
+          pb: "10px",
+          pt: "10px",
+          display: loading === true ? "none" : "block",
+        }}
+      >
+        <Text
           sx={{
-            flexDirection: "column",
-            width: "100%",
-            bg: loading === true ? "rgba(222,222,222,0)" : "#FFF7F8",
-            p: "10px",
-            mb: ["12px", "0px", "0px"],
+            mx: "10px",
+            width: "98%",
+            display: loading === true ? "none" : "block",
           }}
         >
-          <Text
-            sx={{
-              width: ["100%", "98%", "98%"],
-              maxWidth: "100%",
-              mb: "10px",
-              fontWeight: 600,
-              fontSize: headerFont,
-              display: loading === true ? "none" : "block",
-            }}
-          >
-            During visit
-          </Text>
-          <Text
-            sx={{
-              width: "100%",
-              maxWidth: "100%",
-              fontSize: "16px",
-              display: loading === true ? "none" : "block",
-            }}
-          >
-            • You will need to clear some flat space on a table for Emily to
-            work from.<br></br>• The table should have room next to it for the
-            treatment chair to fit next to it. <br></br>• Emily will bring the
-            treatment chair, a sterile single use treatment pack, medical grade
-            disinfectant wipes and her own waste disposal system. <br></br>•
-            Please ensure there is somewhere for Emily to wash her hands with
-            soap upon arrival.
-            <br></br>• Emily will require proof of your age with photographic
-            identification.
-            <br></br>• Emily will discuss with you your medical history,
-            treatment expectations, answer any questions and provide information
-            on the expected treatment, provide aftercare information, examine
-            the area to be treated and if both parties are consenting, then
-            treatment will be carried out.
-          </Text>
-        </Flex>
+          <b>Parking</b>: The local controlled parking zone runs from noon-2pm
+          on weekdays. Emilys appointments can only be booked either side of the
+          controlled parking zone hours, for your benefit. <br></br>
+          <b>Bus route</b>: The W5 bus is a hop-on, hop-off bus route that runs
+          through the area.
+        </Text>
       </Flex>
       <Flex
         sx={{
