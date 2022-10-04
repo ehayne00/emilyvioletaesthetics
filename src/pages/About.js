@@ -109,7 +109,7 @@ const About = () => {
                 display: loading === true ? "none" : "block",
               }}
             >
-              Tuesday 9am - 5pm
+              Tuesday 9am - 6pm
               {/* <br></br>Friday 10am - 5.45pm */}
               {/* <br></br>Saturday (one per month) 9am - 2pm */}
             </HoursText>
