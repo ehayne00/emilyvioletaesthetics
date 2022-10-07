@@ -8,6 +8,11 @@ const aging = [
     image: "",
   },
   {
+    title: "Anti-wrinkle injections with BOTOX®",
+    image: "",
+    text: "£100 (one area), £240 (3 areas)",
+  },
+  {
     title: "PROFHILO® skin booster",
     image: "",
     text: "£250 per session / £400 package",
@@ -16,11 +21,6 @@ const aging = [
     title: "SEVENTY HYAL® skin booster",
     image: "",
     text: "£130 per session / £300 package",
-  },
-  {
-    title: "Anti-wrinkle injections with BOTOX®",
-    image: "",
-    text: "£100 (one area), £240 (3 areas)",
   },
   { title: "Micro-needling", image: "", text: "£150" },
   {
