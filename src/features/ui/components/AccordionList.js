@@ -48,7 +48,7 @@ const beauty = [
       "Per session £150 (small area), £250 (large area), packages available",
   },
   {
-    title: "Dermal filler",
+    title: "Dermal filler (lips, chin, cheek, jaw, nose..)",
     header: "true",
     image: "",
     text: "0.5ml £150, 1ml £280, 2ml £550, 3ml £750...+",
