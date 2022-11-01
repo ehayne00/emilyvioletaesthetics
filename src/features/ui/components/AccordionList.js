@@ -22,17 +22,17 @@ const aging = [
     image: "",
     text: "£130 per session / £300 package",
   },
-  { title: "Micro-needling", image: "", text: "£150" },
-  {
-    title: "Derma-planing",
-    image: "",
-    text: "£45",
-  },
-  {
-    title: "Chemical Peels",
-    image: "",
-    text: "£70",
-  },
+  // { title: "Micro-needling", image: "", text: "Coming soon" },
+  // {
+  //   title: "Derma-planing",
+  //   image: "",
+  //   text: "Coming soon",
+  // },
+  // {
+  //   title: "Chemical Peels",
+  //   image: "",
+  //   text: "Coming soon",
+  // },
 ];
 const beauty = [
   {
@@ -59,11 +59,11 @@ const beauty = [
     image: "",
     text: "£70",
   },
-  {
-    title: "Facials",
-    image: "",
-    text: "please view booking site for range",
-  },
+  // {
+  //   title: "Facials",
+  //   image: "",
+  //   text: "Coming soon",
+  // },
 ];
 
 const Box = ({ treatments, loading }) => (
