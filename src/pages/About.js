@@ -314,6 +314,7 @@ const About = () => {
           bg: loading === true ? "none" : "#e79fc4",
           pb: "10px",
           pt: "10px",
+          pr: "10px",
           display: loading === true ? "none" : "block",
         }}
       >

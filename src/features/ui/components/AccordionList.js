@@ -53,12 +53,12 @@ const beauty = [
     image: "",
     text: "0.5ml £150, 1ml £280, 2ml £550, 3ml £750...+",
   },
-  {
-    title: "Lash lift and tint",
-    header: "true",
-    image: "",
-    text: "£70",
-  },
+  // {
+  //   title: "Lash lift and tint",
+  //   header: "true",
+  //   image: "",
+  //   text: "£70",
+  // },
   // {
   //   title: "Facials",
   //   image: "",
