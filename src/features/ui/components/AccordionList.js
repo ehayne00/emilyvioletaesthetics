@@ -3,7 +3,7 @@ import { Flex, Text } from "theme-ui";
 
 const aging = [
   {
-    title: "Anti-aging Treatments",
+    title: "Treatments",
     header: "true",
     image: "",
   },
@@ -17,35 +17,11 @@ const aging = [
     image: "",
     text: "£250 per session / £400 package",
   },
+  { title: "Microneedling", image: "", text: "£110-130 per session depending on serum chosen, discounted packages available" },
   {
-    title: "SEVENTY HYAL® skin booster",
+    title: "Chemical Peels",
     image: "",
-    text: "£130 per session / £300 package",
-  },
-  // { title: "Micro-needling", image: "", text: "Coming soon" },
-  // {
-  //   title: "Derma-planing",
-  //   image: "",
-  //   text: "Coming soon",
-  // },
-  // {
-  //   title: "Chemical Peels",
-  //   image: "",
-  //   text: "Coming soon",
-  // },
-];
-const beauty = [
-  {
-    title: "Other Beauty Treatments",
-    header: "true",
-    image: "",
-  },
-  {
-    title: "AQUALYX® fat dissolving injections",
-    header: "true",
-    image: "",
-    text:
-      "Per session £150 (small area), £250 (large area), packages available",
+    text: "£70 per session, or 4 for £250. A choice of peel for different skin concerns",
   },
   {
     title: "Dermal filler (lips, chin, cheek, jaw, nose..)",
@@ -59,17 +35,25 @@ const beauty = [
     image: "",
     text: "£70",
   },
-  // {
-  //   title: "Lash lift and tint",
-  //   header: "true",
-  //   image: "",
-  //   text: "£70",
-  // },
-  // {
-  //   title: "Facials",
-  //   image: "",
-  //   text: "Coming soon",
-  // },
+  {
+    title: "Lash Lift & Tint",
+    header: "true",
+    image: "",
+    text: "£70",
+  },
+  {
+    title: "Brow Lam + Lash Lift & Tint combined",
+    header: "true",
+    image: "",
+    text: "£120",
+  },
+  {
+    title: "AQUALYX® fat dissolving injections",
+    header: "true",
+    image: "",
+    text:
+      "Per session £150 (small area), £250 (large area), packages available",
+  },
 ];
 
 const Box = ({ treatments, loading }) => (
@@ -77,7 +61,7 @@ const Box = ({ treatments, loading }) => (
     sx={{
       border: loading === true ? "none" : "1px solid black",
       flexDirection: "column",
-      width: ["100%", "50%"],
+      width: "100%",
       maxWidth: ["100%", "max-content"],
       mr: ["0px", "10px"],
     }}
@@ -85,7 +69,7 @@ const Box = ({ treatments, loading }) => (
     {treatments.map((treatment, index) => (
       <Flex
         sx={{
-          flexDirection: "column",
+          flexDirection: "row",
           py: "3px",
           px: "10px",
           // cursor: "pointer",
@@ -97,14 +81,18 @@ const Box = ({ treatments, loading }) => (
         <Text
           sx={{
             fontSize: "15px",
+            mr: "10px",
             display: loading === true ? "none" : "block",
           }}
         >
-          {treatment.title}
+          {treatment.title}{":"}
         </Text>
         <Text
           sx={{
             fontSize: "12px",
+            textAlign: "right",
+            mt: "3px",
+            width: "100%",
             display: loading === true ? "none" : "block",
           }}
         >
@@ -125,7 +113,6 @@ const AccordionList = ({ loading }) => {
       }}
     >
       <Box treatments={aging} loading={loading} />
-      <Box treatments={beauty} loading={loading} />
     </Flex>
   );
 };
