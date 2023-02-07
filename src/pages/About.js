@@ -77,8 +77,8 @@ const About = () => {
               display: loading === true ? "none" : "block",
             }}
           >
-            Emily Violet Aesthetics at AVALON, 87 Weston Park, Crouch End, N8
-            9PR
+            Emily Violet Aesthetics at 12c Alexandra Park Road, MUSWELL HILL,
+            London, N10 2AB
           </Text>
           <Flex
             sx={{
@@ -109,9 +109,9 @@ const About = () => {
                 display: loading === true ? "none" : "block",
               }}
             >
-              Tuesday 9.30am - 6pm
-              {/* <br></br>Friday 10am - 5.45pm */}
-              {/* <br></br>Saturday (one per month) 9am - 2pm */}
+              Tuesday 9am - 8pm
+              <br></br>Friday 9am - 1pm
+              <br></br>Saturday 9am - 1pm
             </HoursText>
           </Flex>
           <AccordionList loading={loading} />
@@ -310,6 +310,8 @@ const About = () => {
       <Flex
         sx={{
           flexDirection: ["column", "row"],
+          width: "100%",
+          maxWidth: "100%",
           my: "10px",
           bg: loading === true ? "none" : "#e79fc4",
           pb: "10px",
@@ -321,15 +323,16 @@ const About = () => {
         <Text
           sx={{
             mx: "10px",
-            width: "98%",
+            width: "100%",
+            maxWidth: "100%",
             display: loading === true ? "none" : "block",
           }}
         >
-          <b>Parking</b>: The local controlled parking zone runs from noon-2pm
-          on weekdays. Emilys appointments can only be booked either side of the
-          controlled parking zone hours, for your benefit. <br></br>
-          <b>Bus route</b>: The W5 bus is a hop-on, hop-off bus route that runs
-          through the area.
+          <b>Parking</b>: There is no controlled parking zone on Alexandra Park
+          Road so it is free to park outside on the street at any time of day.
+          <br></br>
+          <b>Bus route</b>: Bus routes that stop near by are 102, 299, 43, 134 and
+          634.
         </Text>
       </Flex>
       <Flex

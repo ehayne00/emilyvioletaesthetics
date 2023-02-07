@@ -8,6 +8,12 @@ const aging = [
     image: "",
   },
   {
+    title: "Dermal filler (lips, chin, cheek, jaw, nose..)",
+    header: "true",
+    image: "",
+    text: "0.5ml £150, 1ml £280, 2ml £550, 3ml £750...+",
+  },
+  {
     title: "Anti-wrinkle injections with BOTOX®",
     image: "",
     text: "£100 (one area), £240 (3 areas)",
@@ -17,43 +23,49 @@ const aging = [
     image: "",
     text: "£250 per session / £400 package",
   },
-  { title: "Microneedling", image: "", text: "£110-130 per session depending on serum chosen, discounted packages available" },
+  {
+    title: "SEVENTY HYAL® skin booster",
+    image: "",
+    text: "£130 per session / £350 package",
+  },
+  {
+    title: "Microneedling",
+    image: "",
+    text:
+      "£110-130 per session depending on serum chosen, discounted packages available",
+  },
   {
     title: "Chemical Peels",
     image: "",
-    text: "£70 per session, or 4 for £250. A choice of peel for different skin concerns",
-  },
-  {
-    title: "Dermal filler (lips, chin, cheek, jaw, nose..)",
-    header: "true",
-    image: "",
-    text: "0.5ml £150, 1ml £280, 2ml £550, 3ml £750...+",
-  },
-  {
-    title: "Brow Lamination with Tint",
-    header: "true",
-    image: "",
-    text: "£70",
-  },
-  {
-    title: "Lash Lift & Tint",
-    header: "true",
-    image: "",
-    text: "£70",
-  },
-  {
-    title: "Brow Lam + Lash Lift & Tint combined",
-    header: "true",
-    image: "",
-    text: "£120",
-  },
-  {
-    title: "AQUALYX® fat dissolving injections",
-    header: "true",
-    image: "",
     text:
-      "Per session £150 (small area), £250 (large area), packages available",
+      "£70 per session, or 4 for £250. A choice of peel for different skin concerns",
   },
+
+  // {
+  //   title: "Brow Lamination with Tint",
+  //   header: "true",
+  //   image: "",
+  //   text: "£70",
+  // },
+  // {
+  //   title: "Lash Lift & Tint",
+  //   header: "true",
+  //   image: "",
+  //   text: "£70",
+  // },
+  // {
+  //   title: "Brow Lam + Lash Lift & Tint combined",
+  //   header: "true",
+  //   image: "",
+  //   text: "£120",
+  // },
+  // {
+  //   title: "AQUALYX® fat dissolving injections",
+  //   header: "true",
+  //   image: "",
+  //   text:
+  //     "Per session £150 (small area), £250 (large area), packages available",
+  // },
 ];
 
 const Box = ({ treatments, loading }) => (
@@ -85,7 +97,8 @@ const Box = ({ treatments, loading }) => (
             display: loading === true ? "none" : "block",
           }}
         >
-          {treatment.title}{":"}
+          {treatment.title}
+          {":"}
         </Text>
         <Text
           sx={{
