@@ -109,9 +109,9 @@ const About = () => {
                 display: loading === true ? "none" : "block",
               }}
             >
-              Tuesday 11am - 8pm
-              <br></br>Friday 11am - 2pm
-              <br></br>Saturday 11am - 2pm
+              Tuesday 11.30am - 8pm
+              <br></br>Friday 11.30am - 2.30pm
+              <br></br>Saturday 11.30am - 2.30pm
             </HoursText>
           </Flex>
           <AccordionList loading={loading} />
