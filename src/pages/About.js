@@ -384,7 +384,7 @@ const About = () => {
           display: loading === true ? "none" : "block",
         }}
       >
-        Contact Emily - WhatsApp: +442035760248 - email:
+        Contact Emily - WhatsApp (message only): +442035760248 - email:
         emilyvioletaesthetics@gmail.com
       </Text>
     </Modern>

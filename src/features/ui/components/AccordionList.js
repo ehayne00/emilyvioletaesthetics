@@ -19,6 +19,12 @@ const aging = [
     text: "£100 (one area), £240 (3 areas)",
   },
   {
+    title: "Microneedling with INFINI BTX® or SEVENTY HYAL®",
+    image: "",
+    text:
+      "£110-130 per session depending on serum chosen, discounted packages available",
+  },
+  {
     title: "PROFHILO® skin booster",
     image: "",
     text: "£250 per session / £400 package",
@@ -29,17 +35,17 @@ const aging = [
     text: "£130 per session / £350 package",
   },
   {
-    title: "Microneedling",
+    title: "SUNEKOS® around the eye skin booster",
     image: "",
-    text:
-      "£110-130 per session depending on serum chosen, discounted packages available",
+    text: "£130 per session / £350 package",
   },
-  {
-    title: "Chemical Peels",
-    image: "",
-    text:
-      "£70 per session, or 4 for £250. A choice of peel for different skin concerns",
-  },
+
+  // {
+  //   title: "Chemical Peels",
+  //   image: "",
+  //   text:
+  //     "£70 per session, or 4 for £250. A choice of peel for different skin concerns",
+  // },
 
   // {
   //   title: "Brow Lamination with Tint",
@@ -84,6 +90,7 @@ const Box = ({ treatments, loading }) => (
           flexDirection: "row",
           py: "3px",
           px: "10px",
+          border: "0.1px solid #e79fc4",
           // cursor: "pointer",
           bg:
             index === 0 && loading !== true ? "#e79fc4" : "rgba(222,222,222,0)",
