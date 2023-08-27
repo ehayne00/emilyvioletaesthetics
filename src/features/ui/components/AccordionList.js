@@ -90,7 +90,8 @@ const Box = ({ treatments, loading }) => (
           flexDirection: "row",
           py: "3px",
           px: "10px",
-          border: "0.1px solid #e79fc4",
+          border:
+            loading !== true ? "0.1px solid #e79fc4" : "rgba(222,222,222,0)",
           // cursor: "pointer",
           bg:
             index === 0 && loading !== true ? "#e79fc4" : "rgba(222,222,222,0)",
