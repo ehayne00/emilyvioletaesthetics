@@ -16,7 +16,7 @@ const aging = [
   {
     title: "Anti-wrinkle injections with BOTOX®",
     image: "",
-    text: "£100 (one area), £240 (3 areas)",
+    text: "from £150 (one area), £240 (3 areas)",
   },
   {
     title: "Microneedling with INFINI BTX® or SEVENTY HYAL®",
